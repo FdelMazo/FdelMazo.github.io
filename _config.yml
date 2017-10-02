@@ -1,1 +1,12 @@
-theme: jekyll-theme-minimal
+theme: minima
+
+title: FdelMazo
+description: >-
+  Frontpage for my personal projects, contributions and colaborations
+
+github: [metadata]
+repository: FdelMazo/Fdelmazo.github.io
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
