@@ -2,6 +2,10 @@
 layout: default
 ---
 
+{% for repository in site.github.public_repositories %}
+* [{{ repository.name }}]({{ repository.html_url }})
+{% endfor %}
+
 <div class="call-outs-container">
 
 {% for repo in site.posts %}
