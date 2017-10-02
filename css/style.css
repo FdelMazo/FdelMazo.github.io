@@ -12,12 +12,15 @@ body{
 
 header{
     background: url(/assets/img/headerbg.png);
-    width: 100%;
     padding: 75px 0;
     text-align: center;
     background-size: cover;
     color: white;
     border-bottom: #ffffe6 solid 0.1px;
+    font-family: stf;
+    color: #ffffe6;
+    letter-spacing: 0.1em;
+
 }
 
 html, body {
@@ -31,17 +34,6 @@ img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-h1{
-    font-family: stf;
-    font-weight: 900;
-    color: #ffffe6;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    display: inline;
-    padding: 0.2em ;
-    border: #ffffe6 solid 8px;
 }
 
 .kicker{

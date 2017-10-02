@@ -1,7 +1,11 @@
 <header class="site-header" role="banner">
     <div class="wrapper">
-        <img src="/assets/img/mafal-dia.png" style="float: left; margin-left: 100px">
-        <h1><span>{{site.title}}</span></h1>
-        <p class="kicker">{{site.description}}</p>
+        <img src="/assets/img/ghavatar.jpg" style="float: left; margin-left: 100px">
+        <h1 style="text-transform: uppercase; border: #ffffe6 solid 6px; display: inline; padding: 0.2em;"><span>{{site.title}}</span></h1>
+        <h3>
+            <p class="kicker">{{site.description}}
+            <h4><a href="{{repo.profile}}" title="Website">Github Profile </a>
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a></h4></p>
+        </h3>
     </div>
 </header>
