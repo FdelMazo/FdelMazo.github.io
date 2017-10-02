@@ -9,9 +9,10 @@
 - [ ] Header con githubavatar, titulo "FdelMazo" y description "frontpage for…"
 - [ ] Todos bien descriptos (project_tagline) y bien documentados
 - [ ] Contacto
-- [ ] Font
 - [ ] Ingles y castellano, default ingles 
 - [ ] Dry run y verbose en parser para los python y -yes para confirmar todo
+- [ ] dejar bien en claro cual se publica y cual es master
+- [ ] Sacar innecesario de css y cambiar font
 
 
 
