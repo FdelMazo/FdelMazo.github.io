@@ -22,7 +22,7 @@ title*: Mafal-Día
 link*: https://github.com/FdelMazo/Mafal-Dia
 site: https://fdelmazo.github.io/Mafal-Dia/
 tagline*: Una historieta de Mafalda, todos los días
-imagen: /assets/img/mafal-dia.png
+imagen*: /assets/img/mafal-dia.png
 color: rgb(236, 112, 99)
 first_commit*: 25/09/2017
 latest_stable_release:

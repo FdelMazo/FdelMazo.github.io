@@ -12,7 +12,7 @@
 - [ ] Ingles y castellano, default ingles 
 - [ ] Dry run y verbose en parser para los python y -yes para confirmar todo
 - [ ] dejar bien en claro cual se publica y cual es master
-- [ ] Sacar innecesario de css y cambiar font
+- [ ] Sacar innecesario de css
 
 
 

@@ -6,10 +6,7 @@ description: >-
 
 email: FedericodelMazo@hotmail.com
 profile: https://github.com/FdelMazo
-github: [metadata]
-repository: FdelMazo/Fdelmazo.github.io
 markdown: kramdown
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-github-metadata

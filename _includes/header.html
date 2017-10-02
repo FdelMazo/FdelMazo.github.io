@@ -1,11 +1,13 @@
 <header class="site-header" role="banner">
     <div class="wrapper">
-        <img src="/assets/img/ghavatar.jpg" style="float: left; margin-left: 100px">
-        <h1 style="text-transform: uppercase; border: #ffffe6 solid 6px; display: inline; padding: 0.2em;"><span>{{site.title}}</span></h1>
-        <h3>
-            <p class="kicker">{{site.description}}
-            <h4><a href="{{repo.profile}}" title="Website">Github Profile </a>
-            <a href="mailto:{{ site.email }}">{{ site.email }}</a></h4></p>
-        </h3>
+        <p>
+        <a href="{{repo.profile}}">
+            <img class="github"  src="/assets/img/ghavatar.jpg" style="float: left;">
+        </a>
+        <h1 style="text-transform: uppercase; display: inline; padding: 0.2em;">
+        {{site.title}}
+        </h1>
+        </p>
+        <h3><p style="font-weight: 500">{{site.description}}</h3>
     </div>
 </header>
