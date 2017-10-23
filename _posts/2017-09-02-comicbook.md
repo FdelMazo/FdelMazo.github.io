@@ -10,5 +10,5 @@ latest_stable_release:
 howtouse:
 howtoinstall:
 features:
-languaje: Python
+language: Python
 ---

@@ -30,6 +30,6 @@ howtouse:
 howtoinstall:
 features:
 si es collaboration o contribution -> with: y withlink:
-languaje*: html
+language*: html
 ---
 ```

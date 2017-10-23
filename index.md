@@ -21,7 +21,7 @@ layout: default
   {% if repo.site %}<a href="{{repo.site}}" title="Website"><h4>Website</h4></a> {% endif %}
   <p>{{repo.tagline}}</p>
   <p>First Commit: {{repo.first_commit}}</p>
-  <p>Languaje: {{repo.languaje}}</p>
+  <p>Language: {{repo.language}}</p>
 </div>
 
 <pre> </pre>
