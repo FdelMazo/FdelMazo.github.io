@@ -1,15 +1,21 @@
-theme: minima
-
+# Site settings
 title: FdelMazo
-description: >-
-  Frontpage for my personal projects, contributions and colaborations
+email: federicodelmazo@hotmail.com
+url: https://fdelmazo.github.io
 
-email: FedericodelMazo@hotmail.com
-profile: https://github.com/FdelMazo
+# Color settings (hex-codes without the leading hash-tag)
+color:
+  primary: 18bc9c #80B3FF
+  primary-rgb: "24,288,156" #"128,179,255"
+  secondary: 2c3e50 #FD6E8A
+  secondary-dark: 233140 #A2122F
+
+social:
+  - title: github
+      url: http://github.com/FdelMazo
+  - title: facebook
+    url: http://facebook.com/FdelMazo
+
+# Build settings
 markdown: kramdown
-repository: fdelmazo/fdelmazo.github.io
-github_username: FdelMazo
-plugins:
-  - jekyll-feed
-  - jekyll-seo-tag
-  - jekyll-github-metadata
+permalink: pretty
