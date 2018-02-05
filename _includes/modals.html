@@ -17,10 +17,16 @@
                             <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
                             <p>{{ post.description }}</p>
                             <ul class="list-inline item-details">
-                                <strong>{{ post.project-date }}</a>
+                                <li><strong>{{ post.project-date }} - </a>
                                 </strong>
+                                </li>
+                                <li><strong>{{ post.languaje }} - </a>
+                                </strong>
+                                </li>
+                                <li>
                                 <strong><a href={{post.link_github}}>Github</a>
                                 </strong>
+                                </li>
                             </ul>
                             <p></p>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
