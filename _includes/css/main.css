@@ -49,7 +49,7 @@ hr.star-primary {
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
+    content: "\f192";
     display: inline-block;
     position: relative;
     top: -.8em;
@@ -77,6 +77,7 @@ hr.star-primary:after {
 }
 
 .img-centered {
+
     margin: 0 auto;
 }
 

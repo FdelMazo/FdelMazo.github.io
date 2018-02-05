@@ -14,8 +14,12 @@ color:
 social:
   - title: github
     url: http://github.com/FdelMazo
+  - title: linkedin
+    url: http://linkedin.com/in/federico-del-mazo
   - title: facebook
     url: http://facebook.com/FededelMazo
+  - title: youtube
+    url: http://www.youtube.com/channel/UCxCVNESUshcBc22fGJNCP-w
 
 # Build settings
 markdown: kramdown
