@@ -409,7 +409,7 @@ footer .footer-below {
 
 li::before {
     content: "•";
-    padding: 5px;
+    padding: 3px;
     color: #{{ site.color.secondary }};
 }
 
@@ -435,22 +435,21 @@ li:first-child:before {
     z-index: 1051;
     width: 3px;
     height: 40px;
-    margin-left: 80px;
+    margin-left: 35px;
     background-color: #{{ site.color.secondary }};
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+-webkit-transform: rotate(45deg);
+-ms-transform: rotate(45deg);
+transform: rotate(45deg);
 }
 
 .portfolio-modal .close-modal .lr .rl {
     z-index: 1052;
     width: 3px;
     height: 40px;
-    margin-right: 80px;
     background-color: #{{ site.color.secondary }};
-    -webkit-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    transform: rotate(90deg);
+-webkit-transform: rotate(90deg);
+-ms-transform: rotate(90deg);
+transform: rotate(90deg);
 }
 
 .navbar-nav>.active>a {
