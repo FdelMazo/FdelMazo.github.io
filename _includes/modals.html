@@ -2,6 +2,12 @@
  {% for post in site.posts %}
     <div class="portfolio-modal modal fade" id="portfolioModal-{{ post.modal-id }}" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
            <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
@@ -14,16 +20,22 @@
                                 <li><strong>{{ post.project-date }}</a>
                                 </strong>
                                 </li>
+                                {%if post.collaborator%}
+                                <li>
+                                    <strong>Junto a: <a href= https://github.com/{{post.collaborator}}>{{post.collaborator}}</a>
+                                    </strong>
+                                </li>
+                                {%endif%}
                                 <li><strong>{{ post.languaje }}</a>
                                 </strong>
                                 </li>
                                 <li>
-                                <strong><a href={{post.link_github}}>Github</a>
+                                <strong><a href={{post.link_github}}>Código fuente</a>
                                 </strong>
                                 </li>
                             </ul>
                             <p></p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
                         </div>
                     </div>
                 </div>

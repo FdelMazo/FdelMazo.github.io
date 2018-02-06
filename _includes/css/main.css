@@ -411,6 +411,11 @@ footer .footer-below {
     margin: 1px 0;
 }
 
+li::after {
+    content: "•";
+    color: #{{ site.color.secondary }};
+}
+
 .portfolio-modal .close-modal {
     position: absolute;
     top: 25px;
@@ -427,9 +432,9 @@ footer .footer-below {
 
 .portfolio-modal .close-modal .lr {
     z-index: 1051;
-    width: 1px;
-    height: 75px;
-    margin-left: 35px;
+    width: 3px;
+    height: 40px;
+    margin-left: 80px;
     background-color: #{{ site.color.secondary }};
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
@@ -438,8 +443,9 @@ footer .footer-below {
 
 .portfolio-modal .close-modal .lr .rl {
     z-index: 1052;
-    width: 1px;
-    height: 75px;
+    width: 3px;
+    height: 40px;
+    margin-right: 80px;
     background-color: #{{ site.color.secondary }};
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
