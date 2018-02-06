@@ -17,21 +17,19 @@
                             <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
                             <p>{{ post.description }}</p>
                             <ul class="list-inline item-details">
-                                <li><strong>{{ post.project-date }}</a>
-                                </strong>
+                                <li>
+                                    <strong>{{ post.project-date }}</a></strong>
                                 </li>
                                 {%if post.collaborator%}
                                 <li>
-                                    <strong>Junto a: <a href= https://github.com/{{post.collaborator}}>{{post.collaborator}}</a>
-                                    </strong>
+                                    <strong>Junto a: <a href= https://github.com/{{post.collaborator}}>{{post.collaborator}}</a></strong>
                                 </li>
                                 {%endif%}
-                                <li><strong>{{ post.languaje }}</a>
-                                </strong>
+                                <li>
+                                    <strong>{{ post.languaje }}</a></strong>
                                 </li>
                                 <li>
-                                <strong><a href={{post.link_github}}>Código fuente</a>
-                                </strong>
+                                <strong><a href={{post.link_github}}>Código fuente</a></strong>
                                 </li>
                             </ul>
                             <p></p>

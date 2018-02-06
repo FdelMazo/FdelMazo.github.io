@@ -407,13 +407,14 @@ footer .footer-below {
     margin-bottom: 30px;
 }
 
-.portfolio-modal .modal-content .item-details {
-    margin: 1px 0;
+li::before {
+    content: "•";
+    padding: 5px;
+    color: #{{ site.color.secondary }};
 }
 
-li::after {
-    content: "•";
-    color: #{{ site.color.secondary }};
+li:first-child:before {
+    content: "";
 }
 
 .portfolio-modal .close-modal {
