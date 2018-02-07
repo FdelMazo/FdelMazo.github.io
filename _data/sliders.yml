@@ -2,11 +2,11 @@
   captions: true
   images:
     - src: /img/portfolio/comics.png
-      alt: Comics
+      alt: 
     - src: /img/screenshots/comics1.png
-      alt: Uso desde la terminal
+      alt: Descarga todas las portadas de la serie seleccionada
     - src: /img/screenshots/comics2.png
-      alt: También como ejecutable de Windows y Linux
+      alt: Portadas variantes y sin texto también
   settings:
     height: "'auto'"
     initialHeight: "450"
@@ -16,7 +16,7 @@
   captions: true
   images:
     - src: /img/portfolio/posters.png
-      alt: Posters
+      alt: 
     - src: /img/screenshots/posters1.png
       alt: Uso desde la terminal
     - src: /img/screenshots/posters2.png
