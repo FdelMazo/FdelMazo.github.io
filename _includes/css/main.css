@@ -409,7 +409,6 @@ footer .footer-below {
 
 li::before {
     content: "•";
-    padding: 2px;
     color: #{{ site.color.secondary }};
 }
 
@@ -418,38 +417,19 @@ li:first-child:before {
 }
 
 .portfolio-modal .close-modal {
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    width: 75px;
-    height: 75px;
+    font-size: 2em;
     background-color: transparent;
     cursor: pointer;
+    position: absolute;
+    top:20px;
+    right: 25px;
+    width: auto;
+    z-index: 1050;
+    border: dotted;
 }
 
 .portfolio-modal .close-modal:hover {
     opacity: .3;
-}
-
-.portfolio-modal .close-modal .lr {
-    z-index: 1051;
-    width: 3px;
-    height: 40px;
-    margin-left: 35px;
-    background-color: #{{ site.color.secondary }};
--webkit-transform: rotate(45deg);
--ms-transform: rotate(45deg);
-transform: rotate(45deg);
-}
-
-.portfolio-modal .close-modal .lr .rl {
-    z-index: 1052;
-    width: 3px;
-    height: 40px;
-    background-color: #{{ site.color.secondary }};
--webkit-transform: rotate(90deg);
--ms-transform: rotate(90deg);
-transform: rotate(90deg);
 }
 
 .navbar-nav>.active>a {

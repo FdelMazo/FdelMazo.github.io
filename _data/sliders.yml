@@ -1,23 +1,27 @@
 - selector: comics
+  captions: true
   images:
     - src: /img/portfolio/comics.png
       alt: Comics
     - src: /img/screenshots/comics1.png
-      alt: Screenshot 1
+      alt: Uso desde la terminal
     - src: /img/screenshots/comics2.png
-      alt: Screenshot 2
+      alt: También como ejecutable de Windows y Linux
   settings:
     height: "'auto'"
+    initialHeight: "450"
     effect: "'fade'"
 
 - selector: posters
+  captions: true
   images:
     - src: /img/portfolio/posters.png
       alt: Posters
     - src: /img/screenshots/posters1.png
-      alt: Screenshot 1
+      alt: Uso desde la terminal
     - src: /img/screenshots/posters2.png
-      alt: Screenshot 2
+      alt: También como ejecutable de Windows y Linux
   settings:
     height: "'auto'"
+    initialHeight: "450"
     effect: "'fade'"
