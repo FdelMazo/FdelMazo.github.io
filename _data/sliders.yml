@@ -1,0 +1,23 @@
+- selector: comics
+  images:
+    - src: /img/portfolio/comics.png
+      alt: Comics
+    - src: /img/screenshots/comics1.png
+      alt: Screenshot 1
+    - src: /img/screenshots/comics2.png
+      alt: Screenshot 2
+  settings:
+    height: "'auto'"
+    effect: "'fade'"
+
+- selector: posters
+  images:
+    - src: /img/portfolio/posters.png
+      alt: Posters
+    - src: /img/screenshots/posters1.png
+      alt: Screenshot 1
+    - src: /img/screenshots/posters2.png
+      alt: Screenshot 2
+  settings:
+    height: "'auto'"
+    effect: "'fade'"

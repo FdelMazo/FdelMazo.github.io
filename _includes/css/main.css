@@ -409,7 +409,7 @@ footer .footer-below {
 
 li::before {
     content: "•";
-    padding: 3px;
+    padding: 2px;
     color: #{{ site.color.secondary }};
 }
 

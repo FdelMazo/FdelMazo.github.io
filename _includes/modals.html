@@ -14,7 +14,11 @@
                         <div class="modal-body">
                             <h3>{{ post.project-title }}</h3>
                             <hr class="star-primary">
-                            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}">
+                            {%if post.slider%}
+                            {% include slider.html selector=post.slider %}
+                            {%else%}
+                            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project_title }}">
+                            {%endif%}
                             <p>{{ post.description }}</p>
                             <ul class="list-inline item-details">
                                 <li>
