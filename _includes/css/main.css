@@ -423,7 +423,9 @@ li:first-child:before {
     position: absolute;
     top:20px;
     right: 25px;
-    width: auto;
+    margin: 10px;
+    width: 40px;
+    height: 40px;
     z-index: 1050;
     border: dotted;
 }
