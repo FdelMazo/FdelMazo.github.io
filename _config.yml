@@ -11,16 +11,6 @@ color:
   secondary: 2c3e50 #FD6E8A
   secondary-dark: 233140 #A2122F
 
-social:
-  - title: github
-    url: http://github.com/FdelMazo
-  - title: linkedin
-    url: http://linkedin.com/in/federico-del-mazo
-  - title: facebook
-    url: http://facebook.com/FededelMazo
-  - title: youtube
-    url: http://www.youtube.com/channel/UCxCVNESUshcBc22fGJNCP-w
-
 # Build settings
 markdown: kramdown
 permalink: pretty
