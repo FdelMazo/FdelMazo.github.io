@@ -9,7 +9,7 @@
       alt: Portadas variantes y sin texto también
   settings:
     height: "'auto'"
-    initialHeight: 100
+    initialHeight: 400
     effect: "'fade'"
 
 - selector: posters
@@ -23,5 +23,5 @@
       alt: También como ejecutable de Windows y Linux
   settings:
     height: "'auto'"
-    initialHeight: 100
+    initialHeight: 400
     effect: "'fade'"
