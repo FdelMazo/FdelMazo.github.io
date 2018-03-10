@@ -29,7 +29,11 @@
                                     <strong>{{ post.languaje }}</a></strong>
                                 </li>
                                 <li>
+                                {%if post.link_github%}
+                                <li>
                                 <strong><a href={{post.link_github}}>Código fuente</a></strong>
+                                </li>
+                                {%endif%}
                                 </li>
                             </ul>
                             <p></p>
