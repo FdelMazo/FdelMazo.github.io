@@ -28,10 +28,14 @@
                                 <li>
                                     <strong>{{ post.languaje }}</a></strong>
                                 </li>
+                                {%if post.link_web%}
                                 <li>
+                                    <strong><a href={{post.link_web}}>Sitio</a></strong>
+                                </li>
+                                {%endif%}
                                 {%if post.link_github%}
                                 <li>
-                                <strong><a href={{post.link_github}}>Código fuente</a></strong>
+                                    <strong><a href={{post.link_github}}>Código fuente</a></strong>
                                 </li>
                                 {%endif%}
                                 </li>
