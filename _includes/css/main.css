@@ -4,7 +4,8 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-body {
+html, body {
+    height: 100%;
     overflow-x: hidden;
 }
 
@@ -194,6 +195,11 @@ section.success {
     section.first {
         padding-top: 75px;
     }
+}
+
+#portfolio {
+    min-height: 100%;
+    margin-bottom: -85px;
 }
 
 #portfolio .portfolio-item {
@@ -407,12 +413,12 @@ footer .footer-below {
     margin-bottom: 30px;
 }
 
-li::before {
+#modal-links li::before {
     content: "•";
     color: #{{ site.color.secondary }};
 }
 
-li:first-child:before {
+#modal-links li:first-child:before {
     content: "";
 }
 
@@ -451,4 +457,9 @@ li:first-child:before {
 .modal.fade.in {
     transform: translateZ(0);
     -webkit-transform: translateZ(0);
+}
+
+svg {
+    position:relative;
+    top:3px;
 }

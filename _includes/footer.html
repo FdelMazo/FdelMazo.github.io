@@ -4,16 +4,8 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-4">
-                        <ul class="list-inline">
-                            {% for network in site.social %}
-                            <li>
-                                <a href="{{ network.url }}" class="btn-social btn-outline"><i class="fa fa-fw fa-{{ network.title }}"></i></a>
-                            </li>
-		                    {% endfor %}
-                        </ul>
-                        <b><a href="https://github.com/fdelmazo/">https://github.com/FdelMazo/</a></b>
-                        <b><a href="mailto:{{ site.email }}">{{ site.email }}</a></b>
-                        <b></b>
+                        <a href="https://github.com/fdelmazo/" class="btn-social btn-outline"><i class="fa fa-fw fa-github"></i></a>
+                        <a href="mailto:{{ site.email }}" class="btn-social btn-outline"><i class="fa fa-fw fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
