@@ -10,7 +10,7 @@
   settings:
     height: "'auto'"
     initialHeight: 400
-    effect: "'fade'"
+    
 
 - selector: posters
   captions: true
@@ -24,4 +24,4 @@
   settings:
     height: "'auto'"
     initialHeight: 400
-    effect: "'fade'"
+    
