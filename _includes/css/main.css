@@ -198,8 +198,7 @@ section.success {
 }
 
 #portfolio {
-    min-height: 100%;
-    margin-bottom: -80px;
+    min-height: calc(100vh - 80px);
     padding: 20px;
 }
 
