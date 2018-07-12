@@ -11,36 +11,49 @@
                             <h3>{{ post.project-title }}</h3>
                             <hr class="star-primary">
                             {%if post.slider%}
-                            {% include slider.html selector=post.slider %}
+                                {% include slider.html selector=post.slider %}
                             {%else%}
-                            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project_title }}">
+                                {%if post.link_web%}
+                                    <a href={{post.link_web}}>
+                                        <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project_title }}">
+                                    </a>
+                                {%elsif post.link_github%}
+                                    <a href={{post.link_github}}>
+                                        <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project_title }}">
+                                    </a>
+                                {%else%}
+                                    <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project_title }}">
+                                {%endif%}
                             {%endif%}
-                            <p>{{ post.description }}</p>
+                            {%if post.description%}
+                                <p>{{ post.description }}</p>
+                            {%endif%}
+
                             <ul class="list-inline item-details" id="modal-links">
 								{%if post.project-date%}
-								<li>
-                                    <strong>{{ post.project-date }}</a></strong>
-                                </li>
+                                    <li>
+                                        <strong>{{ post.project-date }}</a></strong>
+                                    </li>
 								{%endif%}
                                 {%if post.collaborator%}
-                                <li>
-                                    <strong>En conjunto con: <a href= https://github.com/{{post.collaborator}}>{{post.collaborator}}</a></strong>
-                                </li>
+                                    <li>
+                                        <strong>En conjunto con: <a href= https://github.com/{{post.collaborator}}>{{post.collaborator}}</a></strong>
+                                    </li>
                                 {%endif%}
 								{%if post.languaje%}
-                                <li>
-                                    <strong>{{ post.languaje }}</a></strong>
-                                </li>
+                                    <li>
+                                        <strong>{{ post.languaje }}</a></strong>
+                                    </li>
 								{%endif%}
                                 {%if post.link_web%}
-                                <li>
-                                    <strong><a href={{post.link_web}}>Sitio</a></strong>
-                                </li>
+                                    <li>
+                                        <strong><a href={{post.link_web}}>Sitio</a></strong>
+                                    </li>
                                 {%endif%}
                                 {%if post.link_github%}
-                                <li>
-                                    <strong><a href={{post.link_github}}>Código fuente</a></strong>
-                                </li>
+                                    <li>
+                                        <strong><a href={{post.link_github}}>Código fuente</a></strong>
+                                    </li>
                                 {%endif%}
                                 </li>
                             </ul>

@@ -8,8 +8,7 @@
     - src: /img/screenshots/comics2.png
       alt: Portadas variantes y sin texto también
   settings:
-    height: "'auto'"
-    initialHeight: 400
+    transitionDuration: 1000
     
 
 - selector: posters
@@ -22,6 +21,5 @@
     - src: /img/screenshots/posters2.png
       alt: También como ejecutable de Windows y Linux
   settings:
-    height: "'auto'"
-    initialHeight: 400
+    transitionDuration: 1000
     
