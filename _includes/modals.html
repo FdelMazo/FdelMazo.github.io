@@ -15,14 +15,14 @@
                             {%else%}
                                 {%if post.link_web%}
                                     <a href={{post.link_web}}>
-                                        <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project_title }}">
+                                        <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project-title }}">
                                     </a>
                                 {%elsif post.link_github%}
-                                    <a href={{post.link_github}}>
-                                        <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project_title }}">
+                                    <a href=https://github.com/FdelMazo//{{post.link_github}}>
+                                        <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project-title }}">
                                     </a>
                                 {%else%}
-                                    <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project_title }}">
+                                    <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project-title }}">
                                 {%endif%}
                             {%endif%}
                             {%if post.description%}
@@ -52,13 +52,14 @@
                                 {%endif%}
                                 {%if post.link_github%}
                                     <li>
-                                        <strong><a href={{post.link_github}}>Código fuente</a></strong>
+                                        <strong><a href=https://github.com/FdelMazo//{{post.link_github}}>Código fuente</a></strong>
                                     </li>
                                 {%endif%}
                                 </li>
                             </ul>
                             <p></p>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button>
+                            <div class="github-widget" data-repo="FdelMazo/{{post.link_github}}"></div>
+                            <div><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button></div>
                         </div>
                     </div>
                 </div>
