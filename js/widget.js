@@ -1,5 +1,5 @@
 (function(d) {
-  var base = "//fdelmazo.github.io/gh-cards/";
+  var base = "http://fdelmazo.github.io/";
 
   var i, count = 0;
 
@@ -52,8 +52,8 @@
   function render(card, cardurl) {
     cardurl = cardurl || client_url;
     if (!cardurl) {
-      var theme = querydata(card, 'theme') || client_theme || 'default';
-      cardurl = base + 'cards/' + theme + '.html';
+      var theme = querydata(card, 'theme') || client_theme || 'personal';
+      cardurl = base + 'gh-cards/' + theme + '.html';
     }
     var user = querydata(card, 'user');
     var repo = querydata(card, 'repo');
