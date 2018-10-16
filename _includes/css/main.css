@@ -470,10 +470,11 @@ svg {
     top:3px;
 }
 
-#gh-card {
+#ghcard-FdelMazo-1 {
     display: inline-block;
     margin: 0 auto;
-
+    max-width:80%;
+    max-height:80%;
 }
 
 .github-widget {
