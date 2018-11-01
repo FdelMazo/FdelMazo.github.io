@@ -102,9 +102,9 @@
         .github-card .status a:hover {
             color: #4183c4
         }
-        
+
         .user-card .header {
-            background-image: url("user-bg.png")
+            background-image:url("https://cdn-images-1.medium.com/max/2000/1*19LWzzJJDPqGq67Vyd0EjQ.jpeg")
         }
         
         .user-card .User {
@@ -472,6 +472,10 @@
         ga("send", "pageview", {
             title: t
         });
+
+        var cardname = document.getElementsByClassName('github-card')[0].getElementsByTagName('h1')[0].innerHTML;
+        var header = document.getElementsByClassName('header')[0];
+        header.style.backgroundImage = 'url('+cardname+'.png)';
     </script>
 </body>
 
