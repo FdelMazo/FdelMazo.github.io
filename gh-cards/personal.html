@@ -5,7 +5,6 @@
         body {
             padding: 0;
             margin: 0;
-            font-size: 14px;
             font-family: "Lucida Grande", "Lucida Sans", Geneva, Verdana, sans-serif;
             overflow: hidden
         }
@@ -47,8 +46,7 @@
             -webkit-transition: -webkit-transform .2s ease-in-out;
             margin-top: -40px;
             border: 3px solid #fff;
-            position: relative
-        
+            position: relative        
         }
         
         .github-card .avatar:hover {
@@ -57,26 +55,22 @@
         
         .github-card h1 {
             color: #000;
-            font-size: 24px;
             font-weight: 500;
             text-decoration: none;
             -webkit-font-smoothing: antialiased;
             font-size: 8vw;
-            letter-spacing: -.06em;
             margin: 0px 0 10px;
-            line-height: 1;
+            display: inline-block;
         }
         
         .github-card ul {
             text-transform: uppercase;
-            font-size: 12px;
             color: #707070;
             list-style-type: none;
             margin: 0;
             padding: 0;
             border-top: 1px solid #eee;
             border-bottom: 1px solid #eee;
-            zoom: 1
         }
         
         .github-card ul:after {
@@ -87,7 +81,6 @@
         
         .github-card .status li {
             float: left;
-            padding: 8px 0;
             box-shadow: 1px 0 0 #eee;
             width: 33%;
             font-size: 5vw;
@@ -100,8 +93,6 @@
         .github-card .status strong {
             display: block;
             color: #292f33;
-            font-size: 16px;
-            line-height: 1.6
         }
         
         .github-card .status a {
@@ -113,11 +104,9 @@
             color: #4183c4
         }
 
-        
         .user-card .User {
             background-position: top left
         }
-        
         
         .user-card img {
             display: block;
@@ -127,9 +116,8 @@
         </style>
     <script id="user-card" type="text/template">
         <div class="header {type}"></div>
-        <a class="avatar" href="https://github.com/{login}"><img src="{avatar_url}&s=80" alt="{name}"></a>
+        <a class="avatar" href="https://github.com/{login}"><img src="{avatar_url}&s=80" alt="{name}"></a><h1>{login}</h1>
         <div class="content">
-            <h1>{login}</h1>
             <ul class="status">
                 <li><a href="https://github.com/{login}?tab=repositories"><strong>{public_repos}</strong>Repos</a></li>
                 <li><a href="https://gist.github.com/{login}"><strong>{public_gists}</strong>Gists</a></li>
