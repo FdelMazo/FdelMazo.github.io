@@ -116,7 +116,7 @@
         </style>
     <script id="user-card" type="text/template">
         <title>{login}</title>
-        <div class="header {type}"></div>
+        <div class="header {type}" style='background-image:url("{login}.png")'></div>
         <a class="avatar" href="https://github.com/{login}"><img src="{avatar_url}&s=80" alt="{name}"></a><h1>{login}</h1>
         <div class="content">
             <ul class="status">
@@ -362,10 +362,6 @@
         ga("send", "pageview", {
             title: t
         });
-
-        var cardname = document.title
-        var header = document.getElementsByClassName('header')[0];
-        header.style.backgroundImage = 'url('+cardname+'.png)';
     </script>
 </body>
 
