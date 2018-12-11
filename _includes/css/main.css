@@ -415,10 +415,6 @@ footer .footer-below {
     font-size: 3em;
 }
 
-.portfolio-modal .modal-content img {
-    margin-bottom: 30px;
-}
-
 #modal-links li::before {
     content: "•";
     color: #{{ site.color.secondary }};
@@ -477,7 +473,6 @@ svg {
     max-height:80%;
 }
 
-.github-widget {
+p {
     margin: 10px;
-    font-size: 10px;
 }
