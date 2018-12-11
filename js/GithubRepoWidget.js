@@ -217,6 +217,7 @@
 		xmlhttp.send();
 	}
 	function _init() {
+		
 		var github_eles = document.querySelectorAll('.github-widget'), repoEle, repo, vendorName, repoName, vendorUrl, repoUrl, widget;
 		for (var i = 0; i < github_eles.length; i++) {
 			repoEle = github_eles[i];
@@ -275,6 +276,14 @@
 					'<a class="forks" href="' + repoUrl + '/network/members" title="See forkers">?</a>'+
 					'</div>'+
 					'</div>'+
+					'<div class="github-box-content" hidden>'+
+					'<p class="description"><span></span> &mdash; <a href="' + repoUrl + '#readme">Read More</a></p>'+
+					'<p class="link"></p>'+
+					'</div>'+
+					'<div class="github-box-download" hidden>'+
+					'<div class="updated"></div>'+
+					'<a class="download" href="' + repoUrl + '/zipball/master" title="Get repository">Download as zip</a>'+
+					'</div>'+
 					'</div>';
 				_setHtml(repoEle, widget);
 				_ajaxReq(repoEle, repo);
@@ -292,9 +301,24 @@
 				repoUrl = 'http://github.com/' + vendorName + '/' + repoName;
 
 				widget = '<div class="github-box repo">'+
+					'<div class="github-box-title" hidden>'+
+					'<h3>'+
+					'<a class="owner" href="' + vendorUrl + '" title="' + vendorUrl + '">' + vendorName + '</a>'+
+					'/'+
+					'<a class="repo" href="' + repoUrl + '" title="' + repoUrl + '">' + repoName + '</a>'+
+					'</h3>'+
+					'<div class="github-stats">'+
+					'<a class="watchers" href="' + repoUrl + '/watchers" title="See watchers">?</a>'+
+					'<a class="forks" href="' + repoUrl + '/network/members" title="See forkers">?</a>'+
+					'</div>'+
+					'</div>'+
 					'<div class="github-box-content">'+
 					'<p class="description"><span></span> &mdash; <a href="' + repoUrl + '#readme">Read More</a></p>'+
 					'<p class="link"></p>'+
+					'</div>'+
+					'<div class="github-box-download" hidden>'+
+					'<div class="updated"></div>'+
+					'<a class="download" href="' + repoUrl + '/zipball/master" title="Get repository">Download as zip</a>'+
 					'</div>'+
 					'</div>';
 				_setHtml(repoEle, widget);
@@ -313,17 +337,30 @@
 				repoUrl = 'http://github.com/' + vendorName + '/' + repoName;
 
 				widget = '<div class="github-box repo">'+
+					'<div class="github-box-title" hidden>'+
+					'<h3>'+
+					'<a class="owner" href="' + vendorUrl + '" title="' + vendorUrl + '">' + vendorName + '</a>'+
+					'/'+
+					'<a class="repo" href="' + repoUrl + '" title="' + repoUrl + '">' + repoName + '</a>'+
+					'</h3>'+
+					'<div class="github-stats">'+
+					'<a class="watchers" href="' + repoUrl + '/watchers" title="See watchers">?</a>'+
+					'<a class="forks" href="' + repoUrl + '/network/members" title="See forkers">?</a>'+
+					'</div>'+
+					'</div>'+
+					'<div class="github-box-content" hidden>'+
+					'<p class="description"><span></span> &mdash; <a href="' + repoUrl + '#readme">Read More</a></p>'+
+					'<p class="link"></p>'+
+					'</div>'+
 					'<div class="github-box-download">'+
 					'<div class="updated"></div>'+
 					'<a class="download" href="' + repoUrl + '/zipball/master" title="Get repository">Download as zip</a>'+
-					'</div>'+
 					'</div>'+
 					'</div>';
 				_setHtml(repoEle, widget);
 				_ajaxReq(repoEle, repo);
 			}
 		}
-
 	}
 	_appendCss();
 	_init();

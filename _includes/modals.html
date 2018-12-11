@@ -40,21 +40,25 @@
                                     <li>
                                         <strong>{{ post.project-date }}</a></strong>
                                     </li>
+                                    •
 								{%endif%}
                                 {%if post.collaborator%}
                                     <li>
                                         <strong>En conjunto con: <a href= https://github.com/{{post.collaborator}}>{{post.collaborator}}</a></strong>
                                     </li>
+                                    •
                                 {%endif%}
 								{%if post.languaje%}
                                     <li>
                                         <strong>{{ post.languaje }}</a></strong>
                                     </li>
+                                    •
 								{%endif%}
                                 {%if post.link_web%}
                                     <li>
                                         <strong><a href={{post.link_web}}>Sitio</a></strong>
                                     </li>
+                                    •
                                 {%endif%}
                                 {%if post.link_github%}
                                     <li>

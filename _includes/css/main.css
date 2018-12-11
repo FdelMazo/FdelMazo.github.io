@@ -415,13 +415,12 @@ footer .footer-below {
     font-size: 3em;
 }
 
-#modal-links li::before {
-    content: "•";
-    color: #{{ site.color.secondary }};
+#modal-links li {
+    padding:5px;
 }
 
-#modal-links li:first-child:before {
-    content: "";
+#modal-links li::before {
+    color: #{{ site.color.secondary }};
 }
 
 .portfolio-modal .close-modal {
