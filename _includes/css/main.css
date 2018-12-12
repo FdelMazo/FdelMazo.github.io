@@ -340,7 +340,6 @@ footer {
     align-content: center;
     text-align: center;
     background-color: #{{ site.color.secondary }};
-    padding: 10px 0;
 }
 
 footer h3 {
@@ -474,4 +473,20 @@ svg {
 
 p {
     margin: 10px;
+}
+
+#batmangif {
+    height:90px;
+    padding: 5px;
+}
+.footer-above {
+    height:90px;
+    overflow-y:auto 
+}
+
+.footer-above .container .social-link{
+    margin:10px;
+}
+.footer-above .container{
+    padding:10px;
 }
