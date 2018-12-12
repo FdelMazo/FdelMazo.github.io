@@ -427,9 +427,11 @@ footer .footer-below {
     background-color: transparent;
     cursor: pointer;
     position: absolute;
+    border-radius:2px;
     top:25px;
     right: 25px;
-    margin: 10px;
+    margin: 1px;
+    padding:1px;
     width: 40px;
     height: 40px;
     z-index: 1050;
@@ -440,7 +442,6 @@ footer .footer-below {
     .portfolio-modal .close-modal {
         position: static;
         margin-top: 10px;
-        margin-bottom: 0px;
     }
 }
 
@@ -498,3 +499,4 @@ p {
     width: 0px;
     background: transparent;
 }
+
