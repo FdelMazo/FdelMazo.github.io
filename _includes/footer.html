@@ -1,23 +1,28 @@
     <!-- Footer -->
     <script type="text/javascript">
-    gifs = new Array();
-    gifs[0] = 'sonic.gif';
-    gifs[1] = 'batman.gif';   
     
-    function getrandomgif() {
-        var num = Math.floor( Math.random() * 2);
-        var g = gifs[num];
-        var elem = document.createElement("img");
-        elem.setAttribute("src", "img/"+g);
-        elem.setAttribute("id", "randomgif");
-        document.getElementById("randomgifdiv").appendChild(elem)
+    function placegifs() {
+        var sonic = document.createElement("img");
+        sonic.setAttribute("src", "img/sonic.gif");
+        sonic.setAttribute("class", "gifs");
+
+        var batman = document.createElement("img");
+        batman.setAttribute("src", "img/batman.gif");
+        batman.setAttribute("class", "gifs");
+        
+
+        document.getElementById("sonic").appendChild(sonic)
+        document.getElementById("batman").appendChild(batman)
+
+        $('#footer').scrollTop(90);
     }
 
-    window.addEventListener('load', getrandomgif, false);
+    window.addEventListener('load', placegifs, false);
     </script>
 
     <footer class="text-center">
-        <div class="footer-above">
+        <div class="footer-above" id="footer">
+            <div id="sonic"></div>
             <div class="container">
                 <a href="mailto:{{ site.email }}" class="btn-social btn-outline social-link"><i class="fa fa-fw fa-envelope"></i></a>
                 <a href="https://github.com/fdelmazo/" class="btn-social btn-outline social-link"><i class="fa fa-fw fa-github"></i></a>
@@ -25,7 +30,7 @@
                 <a href="https://fdelmazo.github.io/CV/cv.pdf" class="btn-social btn-outline social-link"><i class="fa fa-fw fa-file"></i></a>
                 <a href="https://letterboxd.com/fdm/list/favs-favs-favs/" class="btn-social btn-outline social-link"><i class="fa fa-fw fa-film"></i></a>
             </div>
-            <div id="randomgifdiv"></div>
+            <img id="batman"></div>
         </div>
         
     </footer>
