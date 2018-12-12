@@ -478,15 +478,23 @@ p {
 #batmangif {
     height:90px;
     padding: 5px;
+    margin-right:15px;
 }
 .footer-above {
     height:90px;
-    overflow-y:auto 
+    overflow-y:auto;
+    margin-right: -15px;
 }
 
 .footer-above .container .social-link{
-    margin:10px;
+    margin:10px 2px;
 }
+
 .footer-above .container{
     padding:10px;
+}
+
+.footer-above::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
 }
