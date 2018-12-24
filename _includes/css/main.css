@@ -476,15 +476,13 @@ p {
     margin: 10px;
 }
 
-#randomgif {
+.gifs {
     height:90px;
     padding: 5px;
-    margin-right:2vw;
 }
 .footer-above {
     height:90px;
     overflow-y:auto;
-    margin-right: -2vw;
 }
 
 .footer-above .container .social-link{
@@ -500,3 +498,6 @@ p {
     background: transparent;
 }
 
+footer {
+    margin-right: -2vw;
+}
