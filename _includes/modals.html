@@ -11,7 +11,9 @@
                             <h3>{{ post.project-title }}</h3>
                             <hr class="star-primary">
 
-                            <div class="github-widget-title" data-repo="FdelMazo/{{post.link_github}}"></div>
+                            {%if post.link_github%}
+                                <div class="github-widget-title" data-repo="FdelMazo/{{post.link_github}}"></div>
+                            {%endif%}    
 
                             {%if post.slider%}
                                 {% include slider.html selector=post.slider %}
@@ -29,7 +31,9 @@
                                 {%endif%}
                             {%endif%}
 
-                            <div class="github-widget-download" data-repo="FdelMazo/{{post.link_github}}"></div>
+                            {%if post.link_github%}
+                                <div class="github-widget-download" data-repo="FdelMazo/{{post.link_github}}"></div>
+                            {%endif%}
 
                             {%if post.description%}
                                 <p>{{ post.description }}</p>
@@ -54,15 +58,15 @@
                                     </li>
                                     •
 								{%endif%}
-                                {%if post.link_web%}
+                                {%if post.gh_pages and post.link_github%}
                                     <li>
-                                        <strong><a href={{post.link_web}}>Sitio</a></strong>
+                                        <strong><a href=https://fdelmazo.github.io/{{post.link_github}}>Sitio</a></strong>
                                     </li>
                                     •
                                 {%endif%}
                                 {%if post.link_github%}
                                     <li>
-                                        <strong><a href=https://github.com/FdelMazo//{{post.link_github}}>Código fuente</a></strong>
+                                        <strong><a href=https://github.com/FdelMazo/{{post.link_github}}>Código fuente</a></strong>
                                     </li>
                                 {%endif%}
                                 </li>
