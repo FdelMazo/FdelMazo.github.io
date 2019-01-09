@@ -22,6 +22,10 @@
                                     <a href={{post.link_web}}>
                                         <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project-title }}">
                                     </a>
+                                {%elsif post.gh_pages%}
+                                <a href={{https://fdelmazo.github.io/{{post.link_github}}>
+                                    <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project-title }}">
+                                </a>
                                 {%elsif post.link_github%}
                                     <a href=https://github.com/FdelMazo//{{post.link_github}}>
                                         <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project-title }}">
@@ -57,8 +61,13 @@
                                         <strong>{{ post.languaje }}</a></strong>
                                     </li>
                                     •
-								{%endif%}
-                                {%if post.gh_pages and post.link_github%}
+                                {%endif%}
+                                {%if post.link_web%}
+                                    <li>
+                                        <strong><a href={{post.link_web}}>Sitio</a></strong>
+                                    </li>
+                                    •
+                                {%elsif post.gh_pages and post.link_github%}
                                     <li>
                                         <strong><a href=https://fdelmazo.github.io/{{post.link_github}}>Sitio</a></strong>
                                     </li>
