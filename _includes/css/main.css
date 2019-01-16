@@ -349,6 +349,7 @@ footer h3 {
 
 footer .footer-col {
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 footer .social-link{
@@ -483,6 +484,7 @@ p {
 .footer-above {
     height:90px;
     overflow-y:auto;
+    overflow-x: hidden;
 }
 
 .footer-above .container .social-link{
@@ -491,6 +493,7 @@ p {
 
 .footer-above .container{
     padding:10px;
+
 }
 
 .footer-above::-webkit-scrollbar {
@@ -500,4 +503,15 @@ p {
 
 footer {
     margin-right: -2vw;
+}
+
+#soundcloud {
+    margin-left:10px;
+    -ms-zoom: 0.60;
+    -moz-transform: scale(0.60);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.60);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.60);
+    -webkit-transform-origin: 0 0;
 }
