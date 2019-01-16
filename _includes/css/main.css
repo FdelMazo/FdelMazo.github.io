@@ -506,6 +506,7 @@ footer {
 }
 
 #soundcloud {
+    width:100%;
     margin-left:10px;
     -ms-zoom: 0.60;
     -moz-transform: scale(0.60);
@@ -514,4 +515,10 @@ footer {
     -o-transform-origin: 0 0;
     -webkit-transform: scale(0.60);
     -webkit-transform-origin: 0 0;
+}
+
+@media(max-width:999px) {
+    #soundcloud {
+        display:none;
+    }
 }
