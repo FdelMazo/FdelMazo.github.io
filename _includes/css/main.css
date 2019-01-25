@@ -11,6 +11,7 @@ html, body {
 }
 
 p {
+    margin: 0 auto;
     font-size: 20px;
 }
 
@@ -415,14 +416,6 @@ footer .footer-below {
     font-size: 3em;
 }
 
-#modal-links li {
-    padding:5px;
-}
-
-#modal-links li::before {
-    color: #{{ site.color.secondary }};
-}
-
 .portfolio-modal .close-modal {
     font-size: 2em;
     background-color: transparent;
@@ -520,4 +513,25 @@ footer {
     #soundcloud {
         display:none;
     }
+}
+
+ul {
+    margin: 0 auto;
+    padding: 0 auto
+}
+
+strong { 
+    margin: 0 auto
+}
+
+#modal-links-div {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.modal-links {
+    display:inline-block;
+    width: 30%
+
 }

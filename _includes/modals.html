@@ -8,79 +8,61 @@
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h3>{{ post.project-title }}</h3>
+                            <h3>{{ post.project_title }}</h3>
+                            
+                            
+                            {%if post.project_subtitle%}
+                                <p><i><b>{{ post.project_subtitle }}</b></i></p>
+                            {%endif%}
+
+                            <div id='modal-links-div'>
+                                
+                                <div class='modal-links' style='text-align: right;'>
+                                    {%if post.project_site%}
+                                        <strong><a href={{post.project_site}}>Sitio Web</a></strong>
+                                    {%elsif post.github_pages%}
+                                        <strong><a href=https://{{post.github_user}}.github.io/{{post.github_repo}}>Sitio Web</a></strong>
+                                    {%endif%}
+                                </div>
+                                
+                                <div class='modal-links' style='width:5%'>
+                                •
+                                </div>
+
+                                <div class='modal-links' style="text-align:left">
+                                    <strong><a href=https://www.github.com/{{post.github_user}}/{{post.github_repo}}>Código 
+                                    Fuente</a></strong>
+                                </div>
+
+                            </div>
+                            
                             <hr class="star-primary">
 
-                            {%if post.link_github%}
-                                <div class="github-widget-title" data-repo="FdelMazo/{{post.link_github}}"></div>
-                            {%endif%}    
+                            <div class="github-widget-title" data-repo="{{post.github_user}}/{{post.github_repo}}"></div>
 
                             {%if post.slider%}
                                 {% include slider.html selector=post.slider %}
                             {%else%}
-                                {%if post.link_web%}
-                                    <a href={{post.link_web}}>
-                                        <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project-title }}">
-                                    </a>
-                                {%elsif post.gh_pages%}
-                                <a href={{https://fdelmazo.github.io/{{post.link_github}}>
-                                    <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project-title }}">
-                                </a>
-                                {%elsif post.link_github%}
-                                    <a href=https://github.com/FdelMazo//{{post.link_github}}>
-                                        <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project-title }}">
-                                    </a>
-                                {%else%}
-                                    <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project-title }}">
-                                {%endif%}
+                                <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project_title }}">
                             {%endif%}
 
-                            {%if post.link_github%}
-                                <div class="github-widget-download" data-repo="FdelMazo/{{post.link_github}}"></div>
+                            <div class="github-widget-download" data-repo="{{post.github_user}}/{{post.github_repo}}"></div>                       
+
+                            <p>{{ post.project_description }}</p>
+
+                            {%if post.github_collaborators%}
+                                <small>
+                                <strong>
+                                    En conjunto con:                                     
+                                    {%for collaborator in post.github_collaborators%}
+                                        <a href= https://github.com/{{collaborator}}>{{collaborator}}</a>
+                                    {%endfor%}
+                                </strong>
+                                </small>
                             {%endif%}
 
-                            {%if post.description%}
-                                <p>{{ post.description }}</p>
-                            {%endif%}
+                            <p><small><strong>{{ post.project_date }}</a></strong></p></small>
 
-                            <ul class="list-inline item-details" id="modal-links">
-								{%if post.project-date%}
-                                    <li>
-                                        <strong>{{ post.project-date }}</a></strong>
-                                    </li>
-                                    •
-								{%endif%}
-                                {%if post.collaborator%}
-                                    <li>
-                                        <strong>En conjunto con: <a href= https://github.com/{{post.collaborator}}>{{post.collaborator}}</a></strong>
-                                    </li>
-                                    •
-                                {%endif%}
-								{%if post.languaje%}
-                                    <li>
-                                        <strong>{{ post.languaje }}</a></strong>
-                                    </li>
-                                    •
-                                {%endif%}
-                                {%if post.link_web%}
-                                    <li>
-                                        <strong><a href={{post.link_web}}>Sitio</a></strong>
-                                    </li>
-                                    •
-                                {%elsif post.gh_pages and post.link_github%}
-                                    <li>
-                                        <strong><a href=https://fdelmazo.github.io/{{post.link_github}}>Sitio</a></strong>
-                                    </li>
-                                    •
-                                {%endif%}
-                                {%if post.link_github%}
-                                    <li>
-                                        <strong><a href=https://github.com/FdelMazo/{{post.link_github}}>Código fuente</a></strong>
-                                    </li>
-                                {%endif%}
-                                </li>
-                            </ul>
-                            <p></p>
                             <div><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Cerrar</button></div>
                         </div>
                     </div>

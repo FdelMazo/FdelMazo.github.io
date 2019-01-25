@@ -1,11 +1,18 @@
 ---
 modal-id: 3
-project-title: Toda Mafalda
-project-date: Septiembre 2017
+project_title: Toda Mafalda
+project_subtitle:
+project_description: Todas las tiras de Mafalda en un mismo sitio.
+
+project_date: Septiembre 2017
+project_site:
+
+github_user: FdelMazo
+github_repo: PosterDownloader
+github_pages: true
+github_collaborators:
+    - Florencia-97
+
 img: mafalda.png
-languaje:
-description: Todas las Tiras de Mafalda en el mismo sitio
-link_github: TodaMafalda
-collaborator: Florencia-97
-gh_pages: true
+slider:
 ---
