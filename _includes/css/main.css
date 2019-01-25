@@ -28,6 +28,10 @@ a.active {
     color: #{{ site.color.primary }};
 }
 
+h3 {
+    font-size: 4.5vmin;
+}
+
 h1,
 h2,
 h3,
@@ -534,4 +538,16 @@ strong {
     display:inline-block;
     width: 30%
 
+}
+
+.collaborator {
+    padding: 0 1px !important;
+}
+
+.collaborator:after {
+    content: ",";   
+}
+
+.collaborator:last-child:after{
+    content: "";   
 }

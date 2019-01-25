@@ -9,8 +9,7 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <h3>{{ post.project_title }}</h3>
-                            
-                            
+                                                        
                             {%if post.project_subtitle%}
                                 <p><i><b>{{ post.project_subtitle }}</b></i></p>
                             {%endif%}
@@ -52,10 +51,12 @@
                             {%if post.github_collaborators%}
                                 <small>
                                 <strong>
-                                    En conjunto con:                                     
+                                    <div style="display:inline; padding:0 4px 0 0">En conjunto con:</div>
+                                    <ul class="list-inline" style="display:inline">
                                     {%for collaborator in post.github_collaborators%}
-                                        <a href= https://github.com/{{collaborator}}>{{collaborator}}</a>
+                                        <li class="collaborator"><a href= https://github.com/{{collaborator}}>{{collaborator}}</a></li>
                                     {%endfor%}
+                                    </ul>
                                 </strong>
                                 </small>
                             {%endif%}
