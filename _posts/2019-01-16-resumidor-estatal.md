@@ -1,7 +1,7 @@
 ---
 modal-id: 8
 project_title: u/ResumidorEstatalBot
-project_subtitle: Reddit Bot
+project_subtitle: Bot de Reddit 
 project_description: Bot de Reddit para resumir noticias.
 
 project_date: Enero 2019

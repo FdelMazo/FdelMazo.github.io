@@ -1,7 +1,7 @@
 ---
 modal-id: 3
 project_title: Toda Mafalda
-project_subtitle:
+project_subtitle: Página web
 project_description: Todas las tiras de Mafalda en un mismo sitio.
 
 project_date: Septiembre 2017
