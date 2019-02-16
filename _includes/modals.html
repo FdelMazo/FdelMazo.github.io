@@ -38,11 +38,7 @@
 
                             <div class="github-widget-title" data-repo="{{post.github_user}}/{{post.github_repo}}"></div>
 
-                            {%if post.slider%}
-                                {% include slider.html selector=post.slider %}
-                            {%else%}
-                                <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project_title }}">
-                            {%endif%}
+                            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project_title }}">
 
                             <div class="github-widget-download" data-repo="{{post.github_user}}/{{post.github_repo}}"></div>                       
 

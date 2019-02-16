@@ -16,5 +16,4 @@ github_collaborators:
  - tomasaccini
 
 img: resumidorestatal.png
-slider:
 ---

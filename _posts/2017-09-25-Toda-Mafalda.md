@@ -14,5 +14,4 @@ github_collaborators:
     - Florencia-97
 
 img: mafalda.png
-slider:
 ---
