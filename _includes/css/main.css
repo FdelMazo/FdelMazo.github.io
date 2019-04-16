@@ -8,6 +8,7 @@ html, body {
     height: 100%;
     overflow-x: hidden;
     text-align: center;
+    background-color: {{ site.color.background }};
 }
 
 p {
@@ -63,6 +64,7 @@ hr.star-primary:after {
     padding: 0 .25em;
     font-family: FontAwesome;
     font-size: 2em;
+    
 }
 
 hr.star-light {
@@ -80,7 +82,7 @@ hr.star-primary {
 
 hr.star-primary:after {
     color: #{{ site.color.secondary }};
-    background-color: #fff;
+    background-color: {{ site.color.background }}
 }
 
 .img-centered {
