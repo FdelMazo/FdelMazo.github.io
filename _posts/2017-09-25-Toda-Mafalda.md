@@ -8,7 +8,7 @@ project_date: Septiembre 2017
 project_site:
 
 github_user: FdelMazo
-github_repo: PosterDownloader
+github_repo: TodaMafalda
 github_pages: true
 github_collaborators:
     - Florencia-97
