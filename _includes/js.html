@@ -5,3 +5,10 @@
     <script src="{{ "/js/freelancer.js" }}"></script>
     <script src="{{ "/js/widget.js" }}"></script>
     <script src="{{ "/js/GithubRepoWidget.js" }}"></script>
+    <script>
+        $(document).keydown(function(event) { 
+          if (event.keyCode == 27) { 
+            $('.close-modal').click();
+          }
+        });
+    </script>
