@@ -37,8 +37,27 @@
 
                             <div class="github-widget-title" data-repo="{{post.github_user}}/{{post.github_repo}}"></div>
 
-                            <img src="img/portfolio/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.project_title }}">
-
+                            <div class="portfolio-item">
+                                {%if post.project_site%}
+                                <a href={{post.project_site}} class="portfolio-link" data-toggle="modal">
+                                {%elsif post.github_pages%}                                
+                                <a href=https://{{post.github_user}}.github.io/{{post.github_repo}} class="portfolio-link" data-toggle="modal">
+                                {%else%}
+                                <a href=https://www.github.com/{{post.github_user}}/{{post.github_repo}} class="portfolio-link" data-toggle="modal">
+                                {%endif%}
+                                    <div class="caption">
+                                        <div class="caption-content">
+                                            {%if post.project_site or post.github_pages%}
+                                            <i>Web</i>
+                                            {%else%}
+                                            <i>Source Code</i>
+                                            {%endif%}
+                                        </div>
+                                    </div>
+                                    <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.project_title }}">
+                                </a>
+                            </div>
+                            
                             <div class="github-widget-download" data-repo="{{post.github_user}}/{{post.github_repo}}"></div>                       
 
                             <p>{{ post.project_description }}</p>
