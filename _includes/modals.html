@@ -12,26 +12,6 @@
                             {%if post.project_subtitle%}
                                 <p><i><b>{{ post.project_subtitle }}</b></i></p>
                             {%endif%}
-
-                            <div id='modal-links-div'>
-                                
-                                <div class='modal-links' style='text-align: right;'>
-                                    {%if post.project_site%}
-                                        <strong><a href={{post.project_site}}>Web</a></strong>
-                                    {%elsif post.github_pages%}
-                                        <strong><a href=https://{{post.github_user}}.github.io/{{post.github_repo}}>Web</a></strong>
-                                    {%endif%}
-                                </div>
-                                
-                                <div class='modal-links' style='width:5%'>
-                                •
-                                </div>
-
-                                <div class='modal-links' style="text-align:left">
-                                    <strong><a href=https://www.github.com/{{post.github_user}}/{{post.github_repo}}>Source</a></strong>
-                                </div>
-
-                            </div>
                             
                             <hr class="star-primary">
 
