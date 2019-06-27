@@ -7,13 +7,11 @@ author: Federico del Mazo
 
 # original theme: https://github.com/jeromelachaud/freelancer-theme
 
-# Color settings (hex-codes without the leading hash-tag)
 color:
-  primary: 18bc9c #80B3FF
-  primary-rgb: "24,288,156" #"128,179,255"
-  secondary: 2c3e50 #FD6E8A
-  secondary-dark: 233140 #A2122F
-  background: aliceblue
+  primary: 168, 237, 234
+  primary-dark: 35, 49, 64
+  secondary: 254, 214, 227
+  secondary-dark: 248, 107, 152
 
 # Build settings
 markdown: kramdown
