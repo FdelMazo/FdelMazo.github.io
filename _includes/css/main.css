@@ -8,11 +8,13 @@ html, body {
     height: 100%;
     overflow-x: hidden;
     text-align: center;
-    background-color: {{ site.color.background }};
+    background-image: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+    
 }
 
 .modal-content {
-    background-color: {{ site.color.background }};
+    background-image: linear-gradient(120deg, #8ec5fc 0%, #e0c3fc 0%);
+
 }
 
 p {
@@ -48,49 +50,12 @@ h6 {
     font-weight: 700;
 }
 
-hr.star-light,
-hr.star-primary {
-    margin: 25px auto 30px;
-    padding: 0;
-    max-width: 250px;
-    border: 0;
-    border-top: solid 5px;
-    text-align: center;
-    overflow: visible;
+.img-responsive {
+    border-radius: 2px;
 }
 
-hr.star-light:after,
-hr.star-primary:after {
-    content: "\f192";
-    display: inline-block;
-    position: relative;
-    top: -.8em;
-    padding: 0 .25em;
-    font-family: FontAwesome;
-    font-size: 2em;
-    
-}
-
-hr.star-light {
-    border-color: #fff;
-}
-
-hr.star-light:after {
-    color: #fff;
-    background-color: #{{ site.color.primary }};
-}
-
-hr.star-primary {
-    border-color: #{{ site.color.secondary }};
-}
-
-hr.star-primary:after {
-    color: #{{ site.color.secondary }};
-    background-color: {{ site.color.background }}
-}
 
 .img-centered {
-
     margin: 0 auto;
 }
 
@@ -564,4 +529,41 @@ strong {
 
 .collaborator:last-child:after{
     content: "";   
+}
+
+.hr {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    margin: 25px auto 30px;
+    padding: 0;
+    max-width: 300px;
+    color: #{{ site.color.secondary }};
+}
+  
+.hr::before, .hr::after {
+    background-color: #{{ site.color.secondary }};
+    content: '';
+    display: inline-block;
+    height: 5px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.hr::before {
+    left: calc(50% + 30px);
+}
+
+.hr::after {
+    right: calc(50% + 30px);
+}
+
+.hr .icon {
+    background-color: transparent; 
+    color: #{{ site.color.secondary }};
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: 2em;
 }
