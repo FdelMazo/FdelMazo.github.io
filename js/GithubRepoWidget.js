@@ -72,7 +72,6 @@
 			border-radius: 3px;
 			padding: 0 5px 0 18px;
 			background: white  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAA/BAMAAAASzPXLAAAAGFBMVEX///+ZmZnW1tbv7+/6+vqxsbHFxcWkpKRy3HCDAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB+MGGwEtJEm3MrsAAALASURBVCgVAbUCSv0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGVWAAAAAAAAAABhcicWAAAAAAAABxUDNFFwAAAAAAIREjETIREgAAAAAhESMRMhESAAAAAAJxVDRHFyAAAAAAAAYXInFgAAAAAAAAAAZVYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABIAAAAAAAAAAAAAEQAAAAAAAAAAAAERAAAAAAAAAAEREREREXAAAAAAARERERERAAAAAAAAERERERAAAAAAAAABERERcAAAAAAAAAEREREgAAAAAAAAARERERAAAAAAAABhFwIREAAAAAAAAFEAAAYQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAAAAABYAAAAAAAAAAAAFEgAAAAAAAAAAAFEgAAAAAAAAAAAFEgAAAAAAAAAAAFEgAAAAAAAAAAAFEgVQAAAAAAAAACEgBhIAAAAAAAAAISAAEgAAAAAAAAIREAcRIAAAAAAAABEQAREAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABywg4myIWPfAAAAABJRU5ErkJggg==')no-repeat
-			
 		}
 		
 		.github-box .github-box-title .github-stats .watchers {
@@ -102,7 +101,8 @@
 			font-weight: bold
 		}
 		
-		.github-box .github-box-download {
+		.github-box .github-box-footer {
+			text-align: left;
 			position: relative;
 			border-top: 1px solid #ddd;
 			background: white;
@@ -112,7 +112,7 @@
 			min-height: 24px;
 		}
 		
-		.github-box .github-box-download .updated {
+		.github-box .github-box-footer .updated {
 			word-wrap: break-word;
 			margin: 0;
 			font-size: 11px;
@@ -122,12 +122,12 @@
 			width: auto
 		}
 		
-		.github-box .github-box-download .updated strong {
+		.github-box .github-box-footer .updated strong {
 			font-weight: bold;
 			color: #000
 		}
 		
-		.github-box .github-box-download .download {
+		.github-box .github-box-footer .language {
 			float: right;
 			position: absolute;
 			top: 10px;
@@ -137,23 +137,6 @@
 			font-size: 12px;
 			color: #666;
 			font-weight: bold;
-			text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
-			padding: 0 10px;
-			border: 1px solid #ddd;
-			border-bottom-color: #bbb;
-			border-radius: 3px;
-			background: #f5f5f5;
-			background: -moz-linear-gradient(#f5f5f5, #e5e5e5);
-			background: -webkit-linear-gradient(#f5f5f5, #e5e5e5);
-		}
-		
-		.github-box .github-box-download .download:hover {
-			color: #527894;
-			border-color: #cfe3ed;
-			border-bottom-color: #9fc7db;
-			background: #f1f7fa;
-			background: -moz-linear-gradient(#f1f7fa, #dbeaf1);
-			background: -webkit-linear-gradient(#f1f7fa, #dbeaf1);
 		}
 		
 		@media (max-width: 767px) {
@@ -169,11 +152,11 @@
 				clear: right;
 				float: right;
 			}
-			.github-box .github-box-download {
+			.github-box .github-box-footer {
 				height: auto;
 				min-height: 46px;
 			}
-			.github-box .github-box-download .download {
+			.github-box .github-box-footer .language {
 				top: 32px;
 			}
 		}
@@ -185,7 +168,7 @@
 		return dom.querySelector(sel);
 	}
 	function _setHtml(dom, h) {
-		dom.innerHTML = h;
+		if (dom){dom.innerHTML = h;}
 	}
 	function _appendCss() {
 		var x = document.createElement('div');
@@ -197,6 +180,7 @@
 		_setHtml(_querySelector(repoEle, '.watchers'), repo.watchers);
 		_setHtml(_querySelector(repoEle, '.stargazers'), repo.stargazers_count);
 		_setHtml(_querySelector(repoEle, '.forks'), repo.forks);
+		_setHtml(_querySelector(repoEle, '.language'), '<i class="fa fa-dot-circle-o"></i> ' + repo.language);
 		_setHtml(_querySelector(repoEle, '.description span'), repo.description);
 		_setHtml(_querySelector(repoEle, '.updated'), 'Latest commit to the <strong>' + repo.default_branch+ '</strong> branch on ' + repo.pushed_at.substring(0, 10));
 
@@ -234,7 +218,7 @@
 				vendorUrl = 'http://github.com/' + vendorName,
 				repoUrl = 'http://github.com/' + vendorName + '/' + repoName;
 
-				widgetTitle = '<div class="github-box repo">'+
+				widget = '<div class="github-box repo">'+
 					'<div class="github-box-title">'+
 					'<h3>'+
 					'<a class="owner" href="' + vendorUrl + '" title="' + vendorUrl + '">' + vendorName + '</a>'+
@@ -248,7 +232,7 @@
 					'</div>'+
 					'</div>'+
 					'</div>';
-				_setHtml(repoEle, widgetTitle);
+				_setHtml(repoEle, widget);
 				_ajaxReq(repoEle, repo);
 			}
 		}
@@ -263,18 +247,18 @@
 				vendorUrl = 'http://github.com/' + vendorName,
 				repoUrl = 'http://github.com/' + vendorName + '/' + repoName;
 
-				widgetDescription = '<div class="github-box repo">'+
+				widget = '<div class="github-box repo">'+
 					'<div class="github-box-content">'+
 					'<p class="description"><span></span> &mdash; <a href="' + repoUrl + '#readme">Read More</a></p>'+
 					'<p class="link"></p>'+
 					'</div>'+
 					'</div>';
-				_setHtml(repoEle, widgetDescription);
+				_setHtml(repoEle, widget);
 				_ajaxReq(repoEle, repo);
 			}
 		}
 
-		var github_eles = document.querySelectorAll('.github-widget-download'), repoEle, repo, vendorName, repoName, vendorUrl, repoUrl, widget;
+		var github_eles = document.querySelectorAll('.github-widget-footer'), repoEle, repo, vendorName, repoName, vendorUrl, repoUrl, widget;
 		for (var i = 0; i < github_eles.length; i++) {
 			repoEle = github_eles[i];
 			if (! _getAttribute(repoEle, rendered, '')) {
@@ -284,13 +268,13 @@
 				vendorUrl = 'http://github.com/' + vendorName,
 				repoUrl = 'http://github.com/' + vendorName + '/' + repoName;
 
-				widgetDownload = '<div class="github-box repo">'+
-					'<div class="github-box-download">'+
+				widget = '<div class="github-box repo">'+
+					'<div class="github-box-footer">'+
 					'<div class="updated"></div>'+
-					'<a class="download" href="' + repoUrl + '/zipball/master" title="Get repository">Download as zip</a>'+
+					'<a class="language"></a>'+
 					'</div>'+
 					'</div>';
-				_setHtml(repoEle, widgetDownload);
+				_setHtml(repoEle, widget);
 				_ajaxReq(repoEle, repo);
 			}
 		}
