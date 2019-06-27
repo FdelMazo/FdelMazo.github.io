@@ -71,15 +71,21 @@
 			border: 1px solid #ddd;
 			border-radius: 3px;
 			padding: 0 5px 0 18px;
-			background: white url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAqBAMAAABB12bjAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAYUExURf///5mZmdbW1u/v7/r6+rGxscXFxaSkpHLccIMAAABsSURBVBjTY2CgBmBODTOAsFgSi9TFHMBMc1Fmk8BiEItJUMhQWFFQAZXJoC7q7FJYhNBmgG7YQAIWMYTvEExXIbh8oAJWQQe4IGsIlKmowAZVwaKowgxlMgkKmwtCjRAUYBSEqnVkYBAm39EALMwNXwql3eYAAAAASUVORK5CYII=) no-repeat
+			background: white  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAA/BAMAAAASzPXLAAAAGFBMVEX///+ZmZnW1tbv7+/6+vqxsbHFxcWkpKRy3HCDAAAAAWJLR0QAiAUdSAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB+MGGwEtJEm3MrsAAALASURBVCgVAbUCSv0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGVWAAAAAAAAAABhcicWAAAAAAAABxUDNFFwAAAAAAIREjETIREgAAAAAhESMRMhESAAAAAAJxVDRHFyAAAAAAAAYXInFgAAAAAAAAAAZVYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAABIAAAAAAAAAAAAAEQAAAAAAAAAAAAERAAAAAAAAAAEREREREXAAAAAAARERERERAAAAAAAAERERERAAAAAAAAABERERcAAAAAAAAAEREREgAAAAAAAAARERERAAAAAAAABhFwIREAAAAAAAAFEAAAYQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWAAAAAAAAAAAAABYAAAAAAAAAAAAFEgAAAAAAAAAAAFEgAAAAAAAAAAAFEgAAAAAAAAAAAFEgAAAAAAAAAAAFEgVQAAAAAAAAACEgBhIAAAAAAAAAISAAEgAAAAAAAAIREAcRIAAAAAAAABEQAREAAAAAAAAAAQAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABywg4myIWPfAAAAABJRU5ErkJggg==')no-repeat
+			
 		}
 		
 		.github-box .github-box-title .github-stats .watchers {
 			border-right: 1px solid #ddd
 		}
 		
+		.github-box .github-box-title .github-stats .stargazers {
+			background-position: -2px -21px;
+			padding-left: 15px
+		}
+
 		.github-box .github-box-title .github-stats .forks {
-			background-position: -4px -21px;
+			background-position: -2px -42px;
 			padding-left: 15px
 		}
 		
@@ -189,6 +195,7 @@
 	function _renderGitHubWidget(repoEle, repo) {
 		repo = JSON.parse(repo);
 		_setHtml(_querySelector(repoEle, '.watchers'), repo.watchers);
+		_setHtml(_querySelector(repoEle, '.stargazers'), repo.stargazers_count);
 		_setHtml(_querySelector(repoEle, '.forks'), repo.forks);
 		_setHtml(_querySelector(repoEle, '.description span'), repo.description);
 		_setHtml(_querySelector(repoEle, '.updated'), 'Latest commit to the <strong>' + repo.default_branch+ '</strong> branch on ' + repo.pushed_at.substring(0, 10));
@@ -217,43 +224,6 @@
 		xmlhttp.send();
 	}
 	function _init() {
-		
-		var github_eles = document.querySelectorAll('.github-widget'), repoEle, repo, vendorName, repoName, vendorUrl, repoUrl, widget;
-		for (var i = 0; i < github_eles.length; i++) {
-			repoEle = github_eles[i];
-			if (! _getAttribute(repoEle, rendered, '')) {
-				repo = _getAttribute(repoEle, 'data-repo', ''),
-				vendorName = repo.split('/')[0],
-				repoName = repo.split('/')[1],
-				vendorUrl = 'http://github.com/' + vendorName,
-				repoUrl = 'http://github.com/' + vendorName + '/' + repoName;
-
-				widget = '<div class="github-box repo">'+
-					'<div class="github-box-title">'+
-					'<h3>'+
-					'<a class="owner" href="' + vendorUrl + '" title="' + vendorUrl + '">' + vendorName + '</a>'+
-					'/'+
-					'<a class="repo" href="' + repoUrl + '" title="' + repoUrl + '">' + repoName + '</a>'+
-					'</h3>'+
-					'<div class="github-stats">'+
-					'<a class="watchers" href="' + repoUrl + '/watchers" title="See watchers">?</a>'+
-					'<a class="forks" href="' + repoUrl + '/network/members" title="See forkers">?</a>'+
-					'</div>'+
-					'</div>'+
-					'<div class="github-box-content">'+
-					'<p class="description"><span></span> &mdash; <a href="' + repoUrl + '#readme">Read More</a></p>'+
-					'<p class="link"></p>'+
-					'</div>'+
-					'<div class="github-box-download">'+
-					'<div class="updated"></div>'+
-					'<a class="download" href="' + repoUrl + '/zipball/master" title="Get repository">Download as zip</a>'+
-					'</div>'+
-					'</div>';
-				_setHtml(repoEle, widget);
-				_ajaxReq(repoEle, repo);
-			}
-		}
-
 		var github_eles = document.querySelectorAll('.github-widget-title'), repoEle, repo, vendorName, repoName, vendorUrl, repoUrl, widget;
 		for (var i = 0; i < github_eles.length; i++) {
 			repoEle = github_eles[i];
@@ -264,7 +234,7 @@
 				vendorUrl = 'http://github.com/' + vendorName,
 				repoUrl = 'http://github.com/' + vendorName + '/' + repoName;
 
-				widget = '<div class="github-box repo">'+
+				widgetTitle = '<div class="github-box repo">'+
 					'<div class="github-box-title">'+
 					'<h3>'+
 					'<a class="owner" href="' + vendorUrl + '" title="' + vendorUrl + '">' + vendorName + '</a>'+
@@ -273,19 +243,12 @@
 					'</h3>'+
 					'<div class="github-stats">'+
 					'<a class="watchers" href="' + repoUrl + '/watchers" title="See watchers">?</a>'+
+					'<a class="stargazers" href="' + repoUrl + '/stargazers" title="See stargazers">?</a>'+
 					'<a class="forks" href="' + repoUrl + '/network/members" title="See forkers">?</a>'+
 					'</div>'+
 					'</div>'+
-					'<div class="github-box-content" hidden>'+
-					'<p class="description"><span></span> &mdash; <a href="' + repoUrl + '#readme">Read More</a></p>'+
-					'<p class="link"></p>'+
-					'</div>'+
-					'<div class="github-box-download" hidden>'+
-					'<div class="updated"></div>'+
-					'<a class="download" href="' + repoUrl + '/zipball/master" title="Get repository">Download as zip</a>'+
-					'</div>'+
 					'</div>';
-				_setHtml(repoEle, widget);
+				_setHtml(repoEle, widgetTitle);
 				_ajaxReq(repoEle, repo);
 			}
 		}
@@ -300,28 +263,13 @@
 				vendorUrl = 'http://github.com/' + vendorName,
 				repoUrl = 'http://github.com/' + vendorName + '/' + repoName;
 
-				widget = '<div class="github-box repo">'+
-					'<div class="github-box-title" hidden>'+
-					'<h3>'+
-					'<a class="owner" href="' + vendorUrl + '" title="' + vendorUrl + '">' + vendorName + '</a>'+
-					'/'+
-					'<a class="repo" href="' + repoUrl + '" title="' + repoUrl + '">' + repoName + '</a>'+
-					'</h3>'+
-					'<div class="github-stats">'+
-					'<a class="watchers" href="' + repoUrl + '/watchers" title="See watchers">?</a>'+
-					'<a class="forks" href="' + repoUrl + '/network/members" title="See forkers">?</a>'+
-					'</div>'+
-					'</div>'+
+				widgetDescription = '<div class="github-box repo">'+
 					'<div class="github-box-content">'+
 					'<p class="description"><span></span> &mdash; <a href="' + repoUrl + '#readme">Read More</a></p>'+
 					'<p class="link"></p>'+
 					'</div>'+
-					'<div class="github-box-download" hidden>'+
-					'<div class="updated"></div>'+
-					'<a class="download" href="' + repoUrl + '/zipball/master" title="Get repository">Download as zip</a>'+
-					'</div>'+
 					'</div>';
-				_setHtml(repoEle, widget);
+				_setHtml(repoEle, widgetDescription);
 				_ajaxReq(repoEle, repo);
 			}
 		}
@@ -336,28 +284,13 @@
 				vendorUrl = 'http://github.com/' + vendorName,
 				repoUrl = 'http://github.com/' + vendorName + '/' + repoName;
 
-				widget = '<div class="github-box repo">'+
-					'<div class="github-box-title" hidden>'+
-					'<h3>'+
-					'<a class="owner" href="' + vendorUrl + '" title="' + vendorUrl + '">' + vendorName + '</a>'+
-					'/'+
-					'<a class="repo" href="' + repoUrl + '" title="' + repoUrl + '">' + repoName + '</a>'+
-					'</h3>'+
-					'<div class="github-stats">'+
-					'<a class="watchers" href="' + repoUrl + '/watchers" title="See watchers">?</a>'+
-					'<a class="forks" href="' + repoUrl + '/network/members" title="See forkers">?</a>'+
-					'</div>'+
-					'</div>'+
-					'<div class="github-box-content" hidden>'+
-					'<p class="description"><span></span> &mdash; <a href="' + repoUrl + '#readme">Read More</a></p>'+
-					'<p class="link"></p>'+
-					'</div>'+
+				widgetDownload = '<div class="github-box repo">'+
 					'<div class="github-box-download">'+
 					'<div class="updated"></div>'+
 					'<a class="download" href="' + repoUrl + '/zipball/master" title="Get repository">Download as zip</a>'+
 					'</div>'+
 					'</div>';
-				_setHtml(repoEle, widget);
+				_setHtml(repoEle, widgetDownload);
 				_ajaxReq(repoEle, repo);
 			}
 		}
