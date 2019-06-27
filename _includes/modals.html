@@ -27,15 +27,6 @@
                                 {%else%}
                                 <a href=https://www.github.com/{{post.github_user}}/{{post.github_repo}} target="_blank" class="portfolio-link" data-toggle="modal">
                                 {%endif%}
-                                    <div class="caption">
-                                        <div class="caption-content">
-                                            {%if post.project_site or post.github_pages%}
-                                            <strong class="fa fa-link"> Web</strong>
-                                            {%else%}
-                                            <strong class="fa fa-link"> Source Code</strong>
-                                            {%endif%}
-                                        </div>
-                                    </div>
                                     <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.project_title }}">
                                 </a>
                             </div>
