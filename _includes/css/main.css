@@ -488,9 +488,10 @@ p {
 }
 
 .gifs {
-    height:90px;
-    padding: 5px;
+    height:100px;
+    padding: 10px;
 }
+
 .footer-above {
     height:90px;
     overflow-y:auto;
