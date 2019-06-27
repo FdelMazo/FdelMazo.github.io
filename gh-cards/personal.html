@@ -346,22 +346,6 @@
                 return e.replace(/</g, "&lt;").replace(/>/g, "&gt;")
             }
         })(document);
-        (function(e, r, t, a, n, i, o) {
-            e["GoogleAnalyticsObject"] = n;
-            e[n] = e[n] || function() {
-                (e[n].q = e[n].q || []).push(arguments)
-            }, e[n].l = 1 * new Date;
-            i = r.createElement(t), o = r.getElementsByTagName(t)[0];
-            i.async = 1;
-            i.src = a;
-            o.parentNode.insertBefore(i, o)
-        })(window, document, "script", "//www.google-analytics.com/analytics.js", "ga");
-        ga("create", "UA-21475122-2", "auto");
-        var t = qs.user;
-        if (qs.repo) t += "/" + qs.repo;
-        ga("send", "pageview", {
-            title: t
-        });
     </script>
 </body>
 
