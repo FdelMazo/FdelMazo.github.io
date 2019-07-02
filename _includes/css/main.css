@@ -349,7 +349,7 @@ strong {
     overflow: hidden;
     position: relative;
     text-align: center;
-    margin: 25px auto 30px;
+    margin: 20px auto 20px;
     padding: 0;
     max-width: 300px;
     color: rgb({{ site.color.primary-dark }});
@@ -380,4 +380,29 @@ strong {
     display: inline-block;
     font-family: FontAwesome;
     font-size: 2em;
+}
+
+.title {
+    position: relative;
+}
+  
+.title img {
+    padding: 0 1em;
+}
+
+.title .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color:rgb({{site.color.primary-dark}});
+    color:white;
+    padding: 0.3em;
+    transform: translate(-50%, -50%);
+}
+
+@media(max-width:767px) {      
+    .title .centered {
+        background-color:rgba(0,0,0,0);
+        color:rgb({{site.color.primary-dark}});
+    }
 }
