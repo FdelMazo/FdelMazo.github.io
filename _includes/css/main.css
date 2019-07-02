@@ -406,3 +406,9 @@ strong {
         color:rgb({{site.color.primary-dark}});
     }
 }
+
+#blog {
+    border: 2px #0086B3 solid;
+    border-radius: 10px;
+    margin: 30px auto;
+}
