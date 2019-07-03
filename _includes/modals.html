@@ -21,18 +21,26 @@
 
                             <div class="portfolio-item">
                                 {%if post.project_site%}
-                                <a href={{post.project_site}} target="_blank" class="portfolio-link" data-toggle="modal">
+                                    <a href={{post.project_site}} target="_blank" class="portfolio-link" data-toggle="modal">
                                 {%elsif post.github_pages%}                                
-                                <a href=https://{{post.github_user}}.github.io/{{post.github_repo}} target="_blank" class="portfolio-link" data-toggle="modal">
+                                    <a href=https://{{post.github_user}}.github.io/{{post.github_repo}} target="_blank" class="portfolio-link" data-toggle="modal">
                                 {%else%}
-                                <a href=https://www.github.com/{{post.github_user}}/{{post.github_repo}} target="_blank" class="portfolio-link" data-toggle="modal">
+                                    <a href=https://www.github.com/{{post.github_user}}/{{post.github_repo}} target="_blank" class="portfolio-link" data-toggle="modal">
                                 {%endif%}
-                                    <div class="caption">
+                                    <div class="caption caption-alt">
                                         <div class="caption-content">
-                                            {%if post.project_site or post.github_pages%}
-                                            <strong><i class="fa fa-link"> Web</i></strong>
+                                            {%if post.project_site%}
+                                                <strong><i class="fa fa-link"> Web</i></strong>
+                                                <br>    
+                                                <strong><i>{{post.project_site}}</i></strong>
+                                            {%elsif post.github_pages%}                                
+                                                <strong><i class="fa fa-link"> Web</i></strong>
+                                                <br>    
+                                                <strong><i>https://{{post.github_user}}.github.io/{{post.github_repo}}</i></strong>
                                             {%else%}
-                                            <strong><i class="fa fa-link"> Source Code</i></strong>
+                                                <strong><i class="fa fa-link"> Web</i></strong>
+                                                <br>    
+                                                <strong><i>https://www.github.com/{{post.github_user}}/{{post.github_repo}}</i></strong>    
                                             {%endif%}
                                         </div>
                                     </div>

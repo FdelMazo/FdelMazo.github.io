@@ -109,6 +109,11 @@ section h1 {
     transition: all ease .5s;
 }
 
+.portfolio-item .portfolio-link .caption-alt {
+    background-color: rgba({{site.color.primary}}, 0.9);
+}
+
+
 .portfolio-item .portfolio-link .caption:hover {
     opacity: 1;
 }
