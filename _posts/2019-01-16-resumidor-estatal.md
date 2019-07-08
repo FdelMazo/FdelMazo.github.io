@@ -4,7 +4,7 @@ project_title: u/ResumidorEstatalBot
 project_subtitle: Bot de Reddit 
 project_description: Bot de Reddit para resumir noticias.
 
-project_site: https://www.reddit.com/user/resumidorestatalbot
+project_site: https://www.reddit.com/user/resumidorestatalbot/
 
 github_user: pastine
 github_repo: resumidor-estatal

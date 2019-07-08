@@ -23,9 +23,9 @@
                                 {%if post.project_site%}
                                     <a href={{post.project_site}} target="_blank" class="portfolio-link" data-toggle="modal">
                                 {%elsif post.github_pages%}                                
-                                    <a href=https://{{post.github_user}}.github.io/{{post.github_repo}} target="_blank" class="portfolio-link" data-toggle="modal">
+                                    <a href=https://{{post.github_user}}.github.io/{{post.github_repo}}/ target="_blank" class="portfolio-link" data-toggle="modal">
                                 {%else%}
-                                    <a href=https://www.github.com/{{post.github_user}}/{{post.github_repo}} target="_blank" class="portfolio-link" data-toggle="modal">
+                                    <a href=https://www.github.com/{{post.github_user}}/{{post.github_repo}}/ target="_blank" class="portfolio-link" data-toggle="modal">
                                 {%endif%}
                                     <div class="caption caption-alt">
                                         <div class="caption-content">
@@ -55,7 +55,7 @@
                                     <div style="display:inline; padding:0 4px 0 0">En conjunto con:</div>
                                     <ul class="list-inline" style="display:inline">
                                     {%for collaborator in post.github_collaborators%}
-                                        <li class="collaborator"><a href= https://github.com/{{collaborator}}>{{collaborator}}</a></li>
+                                        <li class="collaborator"><a href="https://github.com/{{collaborator}}/">{{collaborator}}</a></li>
                                     {%endfor%}
                                     </ul>
                                 </strong>
