@@ -21,10 +21,6 @@ p {
     font-size: 20px;
 }
 
-p.small {
-    font-size: 16px;
-}
-
 a,
 a:hover,
 a:focus,
@@ -416,4 +412,14 @@ strong {
     border: 2px #0086B3 solid;
     border-radius: 10px;
     margin: 30px auto;
+}
+
+.caption-title {
+    font-size: 4vmin;
+    word-wrap: break-word;
+}
+
+.caption-subtitle {
+    font-size: 3.2vmin;
+    word-wrap: break-word;
 }

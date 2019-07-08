@@ -29,18 +29,14 @@
                                 {%endif%}
                                     <div class="caption caption-alt">
                                         <div class="caption-content">
+                                            <strong class='caption-title'><i class="fa fa-link"></i> Web</strong>
+                                            <br>
                                             {%if post.project_site%}
-                                                <strong><i class="fa fa-link"> Web</i></strong>
-                                                <br>    
-                                                <strong><i>{{post.project_site}}</i></strong>
+                                                <strong class='caption-subtitle'><i>{{post.project_site}}</i></strong>
                                             {%elsif post.github_pages%}                                
-                                                <strong><i class="fa fa-link"> Web</i></strong>
-                                                <br>    
-                                                <strong><i>https://{{post.github_user}}.github.io/{{post.github_repo}}</i></strong>
+                                                <strong class='caption-subtitle'><i>https://{{post.github_user}}.github.io/{{post.github_repo}}</i></strong>
                                             {%else%}
-                                                <strong><i class="fa fa-link"> Web</i></strong>
-                                                <br>    
-                                                <strong><i>https://www.github.com/{{post.github_user}}/{{post.github_repo}}</i></strong>    
+                                                <strong class='caption-subtitle'><i>https://www.github.com/{{post.github_user}}/{{post.github_repo}}</i></strong>
                                             {%endif%}
                                         </div>
                                     </div>

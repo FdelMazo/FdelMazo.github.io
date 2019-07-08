@@ -32,10 +32,9 @@
                     <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
                             <div class="caption-content">
-                                <i class="fa fa-search-plus"></i>
-                                <strong>{{post.project_title}}</strong>
+                                <strong class='caption-title'><i class="fa fa-search-plus"></i> {{post.project_title}}</strong>
                                 <br>
-                                <small><strong><i>{{post.project_subtitle}}</i></strong></small>
+                                <strong><i class='caption-subtitle'>{{post.project_subtitle}}</i></strong>
                             </div>
                         </div>
                         <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.project_title }}">
