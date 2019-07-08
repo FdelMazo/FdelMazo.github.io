@@ -78,8 +78,10 @@
     var secret = querydata(card, 'client-secret') || client_secret;
 
     var identity = 'ghcard-' + user + '-' + count;
+    var title = 'ghcard-' + user;
 
     var iframe = d.createElement('iframe');
+    iframe.setAttribute('title', title);
     iframe.setAttribute('id', identity);
     iframe.setAttribute('frameborder', 0);
     iframe.setAttribute('scrolling', 0);
