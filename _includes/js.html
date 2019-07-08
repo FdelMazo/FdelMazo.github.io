@@ -1,11 +1,11 @@
-    <script src="{{ "/js/jquery-1.11.0.js" }}"></script>
-    <script src="{{ "/js/bootstrap.min.js" }}"></script>
-    <script src="{{ "/js/gh-card.js" }}"></script>
-    <script src="{{ "/js/GithubRepoWidget.js" }}"></script>
-    <script>
-        $(document).keydown(function(event) { 
-          if (event.keyCode == 27) { 
-            $('.close-modal').click();
-          }
-        });
-    </script>
+<script>{%include js/jquery-1.11.0.js %}</script>
+<script>{%include js/bootstrap.min.js %}</script>
+<script>{%include js/gh-card.js %}</script>
+<script>{%include js/GithubRepoWidget.js %}</script>
+<script>
+    $(document).keydown(function(event) { 
+      if (event.keyCode == 27) { 
+        $('.close-modal').click();
+      }
+    });
+</script>
