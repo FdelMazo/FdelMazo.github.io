@@ -2,7 +2,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ site.title }}</title>
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1">   
+    
     <meta name="description" content="{{page.description}}">
     <meta name="author" content="{{page.author}}">
 
@@ -14,6 +15,11 @@
     <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
+    <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <meta property="og:image" content="img/portfolio/portfolio.png">
+    <meta property="og:description" content="{{site.description}}">
+    <meta property="og:title" content="{{site.title}}">
+    
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142870087-1"></script>
     <script>
