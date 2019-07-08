@@ -268,11 +268,18 @@ svg {
 
 .gifs {
     height: 90px;
+    margin-bottom: 5px;
+}
+
+@media(max-width:767px) {      
+    #soundcloud {
+        display:none;
+    }
 }
 
 @media(max-width:991px) {      
-    .gifs {
-        display:none;
+    .col {
+        display:inline-block;
     }
 }
 
