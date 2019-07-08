@@ -144,13 +144,13 @@
 				height: auto;
 				min-height: 60px
 			}
+			.github-box .github-box-title h3 {
+				padding: 10px 10px 10px 10px;
+				background: none;
+				text-align:left;
+			}
 			.github-box .github-box-title h3 .repo {
 				display: block
-			}
-			.github-box .github-box-title .github-stats a {
-				display: block;
-				clear: right;
-				float: right;
 			}
 			.github-box .github-box-footer {
 				height: auto;
