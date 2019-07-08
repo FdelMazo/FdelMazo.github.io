@@ -1,20 +1,6 @@
 <!-- Footer -->
 <script type="text/javascript">    
     function placegifs() {
-        var sonic = document.createElement("img");
-        sonic.setAttribute("src", "img/sonic.gif");
-        sonic.setAttribute("alt", "sonic.gif");
-        sonic.setAttribute("class", "gifs");
-
-        var batman = document.createElement("img");
-        batman.setAttribute("src", "img/batman.gif");
-        batman.setAttribute("alt", "batman.gif");
-        batman.setAttribute("class", "gifs");
-        
-
-        document.getElementById("sonic").appendChild(sonic)
-        document.getElementById("batman").appendChild(batman)
-
         $('#footer').scrollTop(100);
     }
 
@@ -23,9 +9,8 @@
 
 <footer class="text-center">
     <div class="footer" id="footer">
-        <div id="sonic"></div>
+        <img src='img/sonic.gif' alt='sonic.gif' class='gifs'>
         <div class="row">
-
             
             <div class="footer-col col-md-4">
                 <iframe id="soundcloud" width="170%" height="120em" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/572785521&color=%2318bc9c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
@@ -41,7 +26,7 @@
 
             </div>
         </div>
-        <div id="batman"></div>
+        <img src='img/batman.gif' alt='batman.gif' class='gifs'>
     </div>
     
 </footer>
