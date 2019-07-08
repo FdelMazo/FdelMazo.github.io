@@ -267,23 +267,24 @@ svg {
 }
 
 .gifs {
-    height:100px;
-    padding: 10px;
+    height: 90px;
 }
 
+@media(max-width:991px) {      
+    .gifs {
+        display:none;
+    }
+}
+
+
 .footer {
-    height:90px;
-    overflow-y:auto;
+    height: 110px;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
-.footer .container .social-link{
-    margin:10px 2px;
-}
-
-.footer .container{
-    padding:10px;
-
+.footer .row{
+    padding:30px 0 0 0;
 }
 
 .footer::-webkit-scrollbar {
@@ -293,23 +294,6 @@ svg {
 
 footer {
     margin-right: -2vw;
-}
-
-#soundcloud {
-    margin-left:10px;
-    -ms-zoom: 0.60;
-    -moz-transform: scale(0.60);
-    -moz-transform-origin: 0 0;
-    -o-transform: scale(0.60);
-    -o-transform-origin: 0 0;
-    -webkit-transform: scale(0.60);
-    -webkit-transform-origin: 0 0;
-}
-
-@media(max-width:999px) {
-    #soundcloud {
-        display:none;
-    }
 }
 
 ul {

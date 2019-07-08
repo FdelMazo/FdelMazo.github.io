@@ -1,7 +1,7 @@
 <!-- Footer -->
 <script type="text/javascript">    
     function placegifs() {
-        $('#footer').scrollTop(100);
+        $('#footer').scrollTop(0);
     }
 
     window.addEventListener('load', placegifs, false);
@@ -9,24 +9,28 @@
 
 <footer class="text-center">
     <div class="footer" id="footer">
-        <img src='img/sonic.gif' alt='sonic.gif' class='gifs'>
-        <div class="row">
-            
-            <div class="footer-col col-md-4">
-                <iframe id="soundcloud" width="170%" height="120em" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/572785521&color=%2318bc9c&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
-            </div>
-            
-
-            <div class="footer-col col-md-4">
+        <div class='container'>
+            <div class="row">  
                 <a aria-label="Send Mail" href="mailto:{{ site.email }}" class="btn-social btn-outline social-link"><i class="fa fa-fw fa-envelope"></i></a>
                 <a aria-label="Linkedin" href="https://linkedin.com/in/fdelmazo/" class="btn-social btn-outline social-link"><i class="fa fa-fw fa-linkedin"></i></a>
                 <a aria-label="Github" href="https://github.com/fdelmazo/" class="btn-social btn-outline social-link"><i class="fa fa-fw fa-github"></i></a>
                 <a aria-label="Letterboxd" href="https://letterboxd.com/fdm/list/favs-favs-favs/" class="btn-social btn-outline social-link"><i class="fa fa-fw fa-film"></i></a>
                 <a aria-label="Resumé" href="https://fdelmazo.github.io/CV/cv.pdf" class="btn-social btn-outline social-link"><i class="fa fa-fw fa-briefcase"></i></a>
+            </div>
 
+            <div class='row'>
+                <div class='col-md-1'></div>
+                <div class='col-md-2'>
+                    <img src='img/batman.gif' alt='batman.gif' class='gifs'>
+                </div>
+                <div class='col-md-6'>
+                    <iframe id="soundcloud" width="100%" height='100px' scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/572785521&color=%23f86b98&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>
+                </div> 
+                <div class='col-md-2'>
+                    <img src='img/sonic.gif' alt='sonic.gif' class='gifs'>
+                </div>
+                <div class='col-md-1'></div>
             </div>
         </div>
-        <img src='img/batman.gif' alt='batman.gif' class='gifs'>
     </div>
-    
 </footer>
