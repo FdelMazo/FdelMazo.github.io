@@ -66,7 +66,7 @@
 		
 		.github-box .github-box-title .github-stats a {
 			display: inline-block;
-			height: 21px;
+			height: 18px;
 			color: #666;
 			border: 1px solid #ddd;
 			border-radius: 3px;
