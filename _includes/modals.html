@@ -50,16 +50,14 @@
                             <p>{{ post.project_description }}</p>
 
                             {%if post.github_collaborators%}
-                                <small>
-                                <strong>
+                                <p><strong>
                                     <div style="display:inline; padding:0 4px 0 0">En conjunto con:</div>
                                     <ul class="list-inline" style="display:inline">
                                     {%for collaborator in post.github_collaborators%}
                                         <li class="collaborator"><a href="https://github.com/{{collaborator}}/">{{collaborator}}</a></li>
                                     {%endfor%}
                                     </ul>
-                                </strong>
-                                </small>
+                                </strong></p>
                             {%endif%}
 
                             <div><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button></div>
