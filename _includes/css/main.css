@@ -4,16 +4,27 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+:root {
+    --primary-hue: 195;
+    --primary: hsl(var(--primary-hue), 65%, 80%);
+    --primary-dark: hsl(var(--primary-hue), 30%, 15%);
+    --primary-dark-alpha: hsla(var(--primary-hue), 30%, 15%, 90%);
+
+    --secondary-hue: 345;
+    --secondary: hsl(var(--secondary-hue), 95%, 90%);
+    --secondary-dark: hsl(var(--secondary-hue), 90%, 70%);
+    --secondary-dark-alpha: hsla(var(--secondary-hue), 90%, 70%, 90%);
+}
+
 html, body {
     height: 100%;
     overflow-x: hidden;
     text-align: center;
-    background-image: linear-gradient(120deg, rgb({{site.color.primary}}) 0%, rgb({{site.color.secondary}}) 100%);
-    
+    background-image: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
 }
 
 .modal-content {
-    background-image: linear-gradient(120deg, rgb({{site.color.secondary}}) 0%, rgb({{site.color.primary}}) 100%);
+    background-image: linear-gradient(120deg, var(--secondary) 0%, var(--primary) 100%);
 }
 
 p {
@@ -27,7 +38,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: rgb({{site.color.secondary-dark}});
+    color: var(--secondary-dark);
 }
 
 h3 {   
@@ -98,14 +109,14 @@ section h1 {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background-color: rgba({{site.color.secondary-dark}}, 0.9);
+    background-color: var(--secondary-dark-alpha);
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     transition: all ease .5s;
 }
 
 .portfolio-item .portfolio-link .caption-alt {
-    background-color: rgba({{site.color.primary-dark}}, 0.9);
+    background-color: var(--primary-dark-alpha);
 }
 
 .portfolio-item .portfolio-link .caption:hover {
@@ -146,7 +157,7 @@ section h1 {
 .btn-outline:active,
 .btn-outline.active {
     border: solid 2px #fff;
-    color: rgb({{site.color.secondary-dark}});
+    color: var(--secondary-dark);
     background: #fff;
 }
 
@@ -155,7 +166,7 @@ footer {
     align-items: center;
     align-content: center;
     text-align: center;
-    background-color: rgb({{ site.color.primary-dark }});
+    background-color: var(--primary-dark)
 }
 
 footer h3 {
@@ -328,11 +339,11 @@ strong {
     margin: 20px auto 20px;
     padding: 0;
     max-width: 300px;
-    color: rgb({{ site.color.primary-dark }});
+    color: var(--primary-dark)
 }
   
 .hr::before, .hr::after {
-    background-color: rgb({{ site.color.primary-dark }});
+    background-color: var(--primary-dark);
     content: '';
     display: inline-block;
     height: 5px;
@@ -352,7 +363,7 @@ strong {
 
 .hr .icon {
     background-color: transparent; 
-    color: rgb({{ site.color.primary-dark }});
+    color: var(--primary-dark);
     display: inline-block;
     font-family: FontAwesome;
     font-size: 2em;
@@ -370,7 +381,7 @@ strong {
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color:rgb({{site.color.primary-dark}});
+    background-color: var(--primary-dark);
     color:white;
     padding: 0.3em;
     transform: translate(-50%, -50%);
@@ -379,7 +390,7 @@ strong {
 @media(max-width:767px) {      
     .title .centered {
         background-color:rgba(0,0,0,0);
-        color:rgb({{site.color.primary-dark}});
+        color: var(--primary-dark);
     }
 }
 

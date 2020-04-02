@@ -7,12 +7,6 @@ author: https://github.com/FdelMazo/
 
 google_analytics: "UA-142870087-1"
 
-color:
-  primary: 168, 237, 234
-  primary-dark: 35, 49, 64
-  secondary: 254, 214, 227
-  secondary-dark: 248, 107, 152
-
 # Build settings
 markdown: kramdown
 permalink: pretty

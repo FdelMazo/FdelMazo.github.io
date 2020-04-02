@@ -8,4 +8,20 @@
         $('.close-modal').click();
       }
     });
+
+    function updateHue() {
+      let root = document.documentElement;
+      let primaryHue = parseFloat(getComputedStyle(root).getPropertyValue('--primary-hue'))
+      let secondaryHue = parseFloat(getComputedStyle(root).getPropertyValue('--secondary-hue'))
+      primaryHue += 1
+      if (primaryHue > 360) primaryHue -= 360;
+      secondaryHue = primaryHue + 150
+      if (secondaryHue > 360) secondaryHue -= 360;
+      root.style.setProperty('--primary-hue', primaryHue);
+      root.style.setProperty('--secondary-hue', secondaryHue);
+    }
+
+    $(document).ready(function() {
+      setInterval(updateHue, 1000)
+    })
 </script>
