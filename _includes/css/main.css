@@ -100,6 +100,10 @@ section h1 {
     margin: 0 auto;
 }
 
+.portfolio-img {
+    border: 1px solid var(--secondary-dark)
+}
+
 #portfolio .portfolio-item .portfolio-link {
     max-width: 350px;
 }
