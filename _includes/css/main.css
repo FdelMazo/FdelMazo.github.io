@@ -170,7 +170,8 @@ footer {
     align-items: center;
     align-content: center;
     text-align: center;
-    background-color: var(--primary-dark)
+    background-color: var(--primary-dark);
+    font-family: initial;
 }
 
 footer h3 {
