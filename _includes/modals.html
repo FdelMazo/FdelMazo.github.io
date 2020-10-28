@@ -40,14 +40,20 @@
                                             {%endif%}
                                         </div>
                                     </div>
-                                    <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.project_title }}">
+                                    {%if post.inside-img%}
+                                        <img style="width:100%" src="img/portfolio/{{ post.inside-img }}" class="img-responsive" alt="{{ post.project_title }}">
+                                    {%else%}
+                                        <img style="width:100%" src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.project_title }}">
+                                    {%endif%}
                                 </a>
                             </div>
                             
                             <div class="github-widget-footer" data-repo="{{post.github_user}}/{{post.github_repo}}"></div>                       
 
 
-                            <p>{{ post.project_description }}</p>
+                            {%if post.project_description%}
+                                <p>{{ post.project_description }}</p>
+                            {%endif%}
 
                             {%if post.github_collaborators%}
                                 <p><strong>
