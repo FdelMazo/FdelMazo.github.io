@@ -29,13 +29,17 @@
                                 {%endif%}
                                     <div class="caption caption-alt">
                                         <div class="caption-content">
-                                            <strong class='caption-title'><i class="fa fa-link"></i> Web</strong>
-                                            <br>
                                             {%if post.project_site%}
+                                                <strong class='caption-title'><i class="fa fa-link"></i> Web</strong>
+                                                <br>
                                                 <strong class='caption-subtitle'><i>{{post.project_site}}</i></strong>
                                             {%elsif post.github_pages%}                                
+                                                <strong class='caption-title'><i class="fa fa-link"></i> Web</strong>
+                                                <br>    
                                                 <strong class='caption-subtitle'><i>https://{{post.github_user}}.github.io/{{post.github_repo}}</i></strong>
                                             {%else%}
+                                                <strong class='caption-title'><i class="fa fa-link"></i> Source</strong>
+                                                <br>
                                                 <strong class='caption-subtitle'><i>https://www.github.com/{{post.github_user}}/{{post.github_repo}}</i></strong>
                                             {%endif%}
                                         </div>
@@ -57,7 +61,7 @@
 
                             {%if post.github_collaborators%}
                                 <p><strong>
-                                    <div style="display:inline; padding:0 4px 0 0">En conjunto con:</div>
+                                    <div style="display:inline; padding:0 4px 0 0">Collaborators:</div>
                                     <ul class="list-inline" style="display:inline">
                                     {%for collaborator in post.github_collaborators%}
                                         <li class="collaborator"><a href="https://github.com/{{collaborator}}/">{{collaborator}}</a></li>

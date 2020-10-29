@@ -1,8 +1,8 @@
 ---
 modal-id: 14
 project_title: Unknown Pleasures
-project_subtitle: Visualize your microphone with Joy Division's pulsar.
-project_description: Little website done with coffeescript
+project_subtitle: Joy Division's pulsar
+project_description: Little website to visualize your microphone, done with coffeescript
 
 project_site:
 
