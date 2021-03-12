@@ -8,11 +8,11 @@
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
                             <h3>{{ post.project_title }}</h3>
-                                                        
+
                             {%if post.project_subtitle%}
                                 <p><i><b>{{ post.project_subtitle }}</b></i></p>
                             {%endif%}
-                            
+
                             <div class="hr">
                                 <span class="icon fa fa-dot-circle-o"></span>
                             </div>
@@ -22,8 +22,8 @@
                             <div class="portfolio-item">
                                 {%if post.project_site%}
                                     <a href={{post.project_site}} target="_blank" class="portfolio-link" data-toggle="modal">
-                                {%elsif post.github_pages%}                                
-                                    <a href=https://{{post.github_user}}.github.io/{{post.github_repo}}/ target="_blank" class="portfolio-link" data-toggle="modal">
+                                {%elsif post.github_pages%}
+                                    <a href=https://fede.dm/{{post.github_repo}}/ target="_blank" class="portfolio-link" data-toggle="modal">
                                 {%else%}
                                     <a href=https://www.github.com/{{post.github_user}}/{{post.github_repo}}/ target="_blank" class="portfolio-link" data-toggle="modal">
                                 {%endif%}
@@ -33,10 +33,10 @@
                                                 <strong class='caption-title'><i class="fa fa-link"></i> Web</strong>
                                                 <br>
                                                 <strong class='caption-subtitle'><i>{{post.project_site}}</i></strong>
-                                            {%elsif post.github_pages%}                                
+                                            {%elsif post.github_pages%}
                                                 <strong class='caption-title'><i class="fa fa-link"></i> Web</strong>
-                                                <br>    
-                                                <strong class='caption-subtitle'><i>https://{{post.github_user}}.github.io/{{post.github_repo}}</i></strong>
+                                                <br>
+                                                <strong class='caption-subtitle'><i>https://fede.dm/{{post.github_repo}}</i></strong>
                                             {%else%}
                                                 <strong class='caption-title'><i class="fa fa-link"></i> Source</strong>
                                                 <br>
@@ -51,11 +51,11 @@
                                     {%endif%}
                                 </a>
                             </div>
-                            
+
                             {%if post.github_repo2%}
                                 <div class="github-widget-title" data-repo="{{post.github_user}}/{{post.github_repo2}}"></div>
                             {%else%}
-                                <div class="github-widget-footer" data-repo="{{post.github_user}}/{{post.github_repo}}"></div>                       
+                                <div class="github-widget-footer" data-repo="{{post.github_user}}/{{post.github_repo}}"></div>
                             {%endif%}
 
                             {%if post.project_description%}
