@@ -23,6 +23,10 @@
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
+                            {%if post.spanish%}
+                            <strong class="caption-language">
+                                <i class="fa fa-globe"></i> SPA</strong>
+                            {%endif%}
                             <div class="caption-content">
                                 <strong class='caption-title'><i class="fa fa-search-plus"></i> {{post.project_title}}</strong>
                                 <br>

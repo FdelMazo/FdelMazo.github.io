@@ -11,5 +11,6 @@ github_repo: ConstitucionArgentina
 github_pages: 
 github_collaborators:
 
+spanish: true
 img: argentina.png
 ---

@@ -421,3 +421,12 @@ strong {
   font-size: smaller;
   word-wrap: break-word;
 }
+
+.portfolio-item .portfolio-link .caption .caption-language {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  margin: 5px;
+  color: #fff;
+  font-size: 1em;
+}
