@@ -298,6 +298,10 @@ svg {
   overflow-x: hidden;
 }
 
+.footer *:hover {
+  text-decoration: none;
+}
+
 .footer .row {
   padding: 30px 0 0 0;
 }
