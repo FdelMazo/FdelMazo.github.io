@@ -245,6 +245,26 @@ footer .social-link {
   border: dotted;
 }
 
+.bloglink {
+  font-size: 1.8em;
+  width: fit-content;
+  margin: 10px;
+}
+
+.bloglink a {
+  border: dotted;
+  border-color: var(--secondary-dark);
+  border-radius: 2px;
+  padding: 7px;
+}
+.bloglink a:hover {
+  text-decoration: none;
+}
+
+.bloglink a:focus {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 660px) {
   .portfolio-modal .close-modal {
     position: static;
