@@ -177,7 +177,6 @@
 	}
 	function _renderGitHubWidget(repoEle, repo) {
 		repo = JSON.parse(repo);
-		console.log(repo)
 		_setHtml(_querySelector(repoEle, '.watchers'), repo.subscribers_count);
 		_setHtml(_querySelector(repoEle, '.stargazers'), repo.stargazers_count);
 		_setHtml(_querySelector(repoEle, '.forks'), repo.forks);
