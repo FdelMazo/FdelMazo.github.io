@@ -221,14 +221,14 @@
 				widget = '<div class="github-box repo">'+
 					'<div class="github-box-title">'+
 					'<h3>'+
-					'<a class="owner" href="' + vendorUrl + '" title="' + vendorUrl + '">' + vendorName + '</a>'+
+					'<a target="_blank" class="owner" href="' + vendorUrl + '" title="' + vendorUrl + '">' + vendorName + '</a>'+
 					'/'+
-					'<a class="repo" href="' + repoUrl + '" title="' + repoUrl + '">' + repoName + '</a>'+
+					'<a target="_blank" class="repo" href="' + repoUrl + '" title="' + repoUrl + '">' + repoName + '</a>'+
 					'</h3>'+
 					'<div class="github-stats">'+
-					'<a class="watchers" href="' + repoUrl + '/watchers" title="See watchers">?</a>'+
-					'<a class="stargazers" href="' + repoUrl + '/stargazers" title="See stargazers">?</a>'+
-					'<a class="forks" href="' + repoUrl + '/network/members" title="See forkers">?</a>'+
+					'<a target="_blank" class="watchers" href="' + repoUrl + '/watchers" title="See watchers">?</a>'+
+					'<a target="_blank" class="stargazers" href="' + repoUrl + '/stargazers" title="See stargazers">?</a>'+
+					'<a target="_blank" class="forks" href="' + repoUrl + '/network/members" title="See forkers">?</a>'+
 					'</div>'+
 					'</div>'+
 					'</div>';
