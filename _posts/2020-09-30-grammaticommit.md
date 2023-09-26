@@ -1,5 +1,5 @@
 ---
-modal-id: 15
+modal-id: grammaticommit
 project_title: grammaticommit
 project_subtitle: git hook to fix commit messages
 project_description: This Python pre-commit hook fixes your commit messages grammar with the different rules established by Linus Torvalds when he created git.

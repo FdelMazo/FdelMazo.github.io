@@ -1,5 +1,5 @@
 ---
-modal-id: 17
+modal-id: prodeclick
 project_title: prode.click
 project_subtitle: Predecí las elecciones argentinas!
 project_description: Un sitio hecho con Next.js para que la gente arme una partida con sus amigos y pueda apostar los resultados de las elecciones presidenciales
