@@ -246,7 +246,8 @@ footer .social-link {
 }
 
 .bloglink {
-  font-size: 1.8em;
+  font-size: 1.5em;
+  font-weight: 600;
   width: fit-content;
   margin: 10px;
 }
@@ -254,6 +255,7 @@ footer .social-link {
 .bloglink a {
   border: dotted;
   border-color: var(--secondary-dark);
+  color: #333333;
   border-radius: 2px;
   padding: 7px;
 }
