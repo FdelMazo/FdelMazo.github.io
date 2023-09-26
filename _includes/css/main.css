@@ -429,6 +429,7 @@ strong {
   .title .centered {
     background-color: rgba(0, 0, 0, 0);
     color: var(--primary-dark);
+    top: 40%;
   }
 }
 
