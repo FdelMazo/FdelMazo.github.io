@@ -8,7 +8,7 @@
   --primary-hue: 195;
   --primary: hsl(var(--primary-hue), 65%, 80%);
   --primary-dark: hsl(var(--primary-hue), 30%, 15%);
-  --primary-dark-alpha: hsla(var(--primary-hue), 30%, 15%, 90%);
+  --primary-dark-alpha: hsla(var(--primary-hue), 30%, 15%, 85%);
 
   --secondary-hue: 345;
   --secondary: hsl(var(--secondary-hue), 95%, 90%);
