@@ -12,5 +12,5 @@ This site uses:
 $ apt-get install ruby ruby-dev bundler
 $ gem install jekyll bundler
 $ bundle install
-$ bundle exec jekyll serve
+$ bundle exec jekyll serve --livereload
 ```
