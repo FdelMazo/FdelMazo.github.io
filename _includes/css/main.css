@@ -7,13 +7,14 @@
 :root {
   --primary-hue: 195;
   --primary: hsl(var(--primary-hue), 65%, 80%);
-  --primary-dark: hsl(var(--primary-hue), 30%, 15%);
-  --primary-dark-alpha: hsla(var(--primary-hue), 30%, 15%, 85%);
 
   --secondary-hue: 345;
   --secondary: hsl(var(--secondary-hue), 95%, 90%);
-  --secondary-dark: hsl(var(--secondary-hue), 90%, 70%);
-  --secondary-dark-alpha: hsla(var(--secondary-hue), 90%, 70%, 90%);
+  --secondary-alpha: hsla(var(--secondary-hue), 60%, 60%, 90%);
+
+  --text: #333333;
+  --fixed-primary-color: hsl(195, 30%, 15%);
+  --fixed-secondary-color: hsl(345, 85%, 65%);
 }
 
 html,
@@ -47,7 +48,7 @@ a:focus,
 a:active,
 a.active {
   outline: 0;
-  color: var(--secondary-dark);
+  color: var(--fixed-secondary-color);
 }
 
 h3 {
@@ -109,7 +110,7 @@ section h1 {
 }
 
 .portfolio-img {
-  border: 1px solid var(--secondary-dark);
+  border: 2px solid var(--secondary-alpha);
 }
 
 #portfolio .portfolio-item .portfolio-link {
@@ -121,14 +122,10 @@ section h1 {
   width: 100%;
   height: 100%;
   opacity: 0;
-  background-color: var(--secondary-dark-alpha);
+  background-color: var(--secondary-alpha);
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
   transition: all ease 0.5s;
-}
-
-.portfolio-item .portfolio-link .caption-alt {
-  background-color: var(--primary-dark-alpha);
 }
 
 .portfolio-item .portfolio-link .caption:hover {
@@ -141,7 +138,6 @@ section h1 {
   width: 100%;
   margin-top: -24px;
   text-align: center;
-  color: #fff;
   font-size: 1em;
 }
 
@@ -169,16 +165,15 @@ section h1 {
 .btn-outline:active,
 .btn-outline.active {
   border: solid 2px #fff;
-  color: var(--secondary-dark);
+  color: var(--fixed-secondary-color);
   background: #fff;
 }
 
 footer {
-  color: #fff;
   align-items: center;
   align-content: center;
   text-align: center;
-  background-color: var(--primary-dark);
+  background-color: var(--fixed-primary-color);
   font-family: initial;
 }
 
@@ -201,7 +196,6 @@ footer .social-link {
   align-items: center;
   width: 50px;
   height: 50px;
-  border: 2px solid #fff;
   border-radius: 100%;
   text-align: center;
   font-size: 20px;
@@ -254,8 +248,8 @@ footer .social-link {
 
 .bloglink a {
   border: dotted;
-  border-color: var(--secondary-dark);
-  color: #333333;
+  border-color: var(--fixed-primary-color);
+  color: var(--text);
   border-radius: 2px;
   padding: 7px;
 }
@@ -376,12 +370,12 @@ strong {
   margin: 20px auto 20px;
   padding: 0;
   max-width: 300px;
-  color: var(--primary-dark);
+  color: var(--fixed-primary-color);
 }
 
 .hr::before,
 .hr::after {
-  background-color: var(--primary-dark);
+  background-color: var(--fixed-primary-color);
   content: "";
   display: inline-block;
   height: 5px;
@@ -401,7 +395,7 @@ strong {
 
 .hr .icon {
   background-color: transparent;
-  color: var(--primary-dark);
+  color: var(--fixed-primary-color);
   display: inline-block;
   font-family: FontAwesome;
   font-size: 2em;
@@ -419,34 +413,33 @@ strong {
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: var(--primary-dark);
+  background-color: var(--fixed-primary-color);
   color: white;
   padding: 0.3em;
   transform: translate(-50%, -30%);
 }
 
 @media (max-width: 767px) {
+  .title img {
+      opacity: 0.7;
+  }
   .title .centered {
     background-color: rgba(0, 0, 0, 0);
-    color: var(--primary-dark);
+    color: var(--text);
     top: 40%;
   }
-}
-
-#blog {
-  border: 2px #0086b3 solid;
-  border-radius: 10px;
-  margin: 30px auto;
 }
 
 .caption-title {
   font-size: larger;
   word-wrap: break-word;
+  color: white;
 }
 
 .caption-subtitle {
   font-size: smaller;
   word-wrap: break-word;
+  color: white;
 }
 
 .portfolio-item .portfolio-link .caption .caption-language {
@@ -454,6 +447,6 @@ strong {
   top: 0%;
   left: 0%;
   margin: 5px;
-  color: #fff;
+  color: white;
   font-size: 1em;
 }
