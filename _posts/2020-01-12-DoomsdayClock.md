@@ -2,7 +2,7 @@
 modal-id: doomsday
 project_title: Doomsday Clock
 project_subtitle: Metaphor for the end of times
-project_description: Just a little quick visualization of the Doomsday Clock up to 2020.
+project_description: Just a little quick visualization of the <a href="https://thebulletin.org/doomsday-clock/" target="_blank">Doomsday Clock</a> up to 2020.
 
 project_site:
 
