@@ -9,8 +9,8 @@ This site uses:
 * [Github-Repo-Widget](https://github.com/hustcc/GitHub-Repo-Widget.js): A widget to display the Github repository of a project, modified so that I can place an image between the header and footer, and with a star counter
 
 ```
-$ apt-get install ruby ruby-dev bundler
-$ gem install jekyll bundler
+$ apt install ruby ruby-dev bundler
+$ gem install bundler
 $ bundle install
 $ bundle exec jekyll serve --livereload
 ```
